@@ -9,6 +9,7 @@ import ConsultationProcess from "@/components/emotional/ConsultationProcess";
 import EmotionalFooter from "@/components/emotional/EmotionalFooter";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import MedicalForm from "@/components/MedicalForm";
 
 const LandingEmocional = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -69,7 +70,7 @@ const LandingEmocional = () => {
         <EmotionalLipedema />
         <TeAcompanamos />
         <EmotionalStories />
-        <ConsultationProcess />
+        <MedicalForm />
       </main>
       <EmotionalFooter />
       
@@ -87,7 +88,7 @@ const LandingEmocional = () => {
       {/* Mobile Floating CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg border-t border-gray-100 z-30">
         <Button 
-          onClick={() => document.getElementById('consulta')?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() => document.getElementById('valoracion')?.scrollIntoView({behavior: 'smooth'})}
           className="w-full bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white py-3"
         >
           Agenda tu consulta
