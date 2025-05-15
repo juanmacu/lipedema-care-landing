@@ -5,8 +5,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, FileImage } from "lucide-react";
 
 const MedicalForm = () => {
   const { toast } = useToast();
@@ -110,9 +111,9 @@ const MedicalForm = () => {
             Tus datos serán tratados con absoluta confidencialidad médica.
           </div>
           
-          <div className="bg-gray-50 rounded-lg p-6 md:p-8">
+          <div className="bg-gray-50 rounded-lg p-6 md:p-8 animate-fade-in">
             <div className="flex items-center mb-6">
-              <div className="bg-green-100 text-green-600 p-2 rounded-full mr-3">
+              <div className="bg-zambrano-light-blue text-zambrano-dark-blue p-2 rounded-full mr-3">
                 <Mail size={20} />
               </div>
               <h3 className="text-xl text-zambrano-dark-blue">
@@ -257,7 +258,49 @@ const MedicalForm = () => {
                 </div>
                 
                 <div>
-                  <Label htmlFor="images">Fotografías</Label>
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="images">Fotografías</Label>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button 
+                          type="button" 
+                          variant="outline" 
+                          size="sm"
+                          className="text-zambrano-dark-blue hover:bg-zambrano-light-blue/20"
+                        >
+                          <FileImage className="mr-1 h-4 w-4" /> Ver instrucciones
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-md">
+                        <DialogHeader>
+                          <DialogTitle>Instrucciones para fotografías</DialogTitle>
+                          <DialogDescription>
+                            Para una valoración médica efectiva, necesitamos fotografías específicas.
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid gap-6 py-4">
+                          <div>
+                            <h4 className="font-medium mb-2 text-zambrano-dark-blue">Se requieren 3 fotografías:</h4>
+                            <ul className="list-disc pl-5 space-y-2 text-sm">
+                              <li><span className="font-medium">Vista frontal:</span> De pie, brazos ligeramente separados del cuerpo.</li>
+                              <li><span className="font-medium">Vista lateral:</span> Perfil completo, posición natural.</li>
+                              <li><span className="font-medium">Vista posterior:</span> De espaldas, brazos a los lados.</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-medium mb-2 text-zambrano-dark-blue">Recomendaciones importantes:</h4>
+                            <ul className="list-disc pl-5 space-y-1.5 text-sm">
+                              <li>Fondo neutro (preferiblemente pared blanca o clara)</li>
+                              <li>Buena iluminación (luz natural si es posible)</li>
+                              <li>Evitar selfies (pedir ayuda o usar temporizador)</li>
+                              <li>Usar ropa que permita ver las áreas afectadas</li>
+                              <li>Fotografía de cuerpo completo</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
                   <p className="text-sm text-zambrano-gray mb-3">
                     Por favor, envía tres fotografías: de frente, perfil y espalda. Fondo neutro, no selfies.
                   </p>
@@ -290,7 +333,7 @@ const MedicalForm = () => {
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-green-500 hover:bg-green-600"
+                  className="w-full bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 hover:scale-[1.02] transition-all duration-300"
                 >
                   {isSubmitting ? "Enviando..." : "Enviar valoración"}
                 </Button>
