@@ -1,6 +1,6 @@
 
 import { useRef, useEffect } from 'react';
-import { Body } from 'lucide-react';
+import { User } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Procedures = () => {
@@ -37,7 +37,7 @@ const Procedures = () => {
           <div className="flex flex-col items-center mb-12">
             <div className="mb-6 relative w-32 h-32">
               <div className="absolute inset-0 bg-zambrano-dark-blue rounded-full flex items-center justify-center">
-                <Body className="w-16 h-16 text-white" />
+                <User className="w-16 h-16 text-white" />
               </div>
             </div>
             <h2 className="section-title text-center mb-4">Procedimientos</h2>
