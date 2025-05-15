@@ -10,6 +10,7 @@ export const useMedicalForm = () => {
     fullName: "",
     email: "",
     phone: "",
+    age: "", // Added the missing age property
     gender: "",
     country: "",
     weight: "",
@@ -76,6 +77,7 @@ export const useMedicalForm = () => {
         fullName: "",
         email: "",
         phone: "",
+        age: "", // Added the missing age property
         gender: "",
         country: "",
         weight: "",
