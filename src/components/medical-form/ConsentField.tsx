@@ -9,7 +9,7 @@ interface ConsentFieldProps {
 
 const ConsentField = ({ formData, handleChange }: ConsentFieldProps) => {
   return (
-    <div className="flex items-start space-x-2 p-3 border border-gray-200 rounded bg-gray-50">
+    <div className="flex items-start space-x-2">
       <input 
         type="checkbox" 
         id="consent"
