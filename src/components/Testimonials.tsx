@@ -1,6 +1,7 @@
 
 import { Star } from 'lucide-react';
 import { useEffect, useRef } from 'react';
+import { TestimonialsIcon } from './icons/SectionIcons';
 
 type TestimonialProps = {
   name: string;
@@ -62,7 +63,13 @@ const Testimonials = () => {
     <section className="bg-gray-50 py-16 md:py-24" id="testimonios">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto reveal-section" ref={sectionRef}>
-          <h2 className="section-title text-center mb-12 text-zambrano-dark-blue">¿Qué opinan nuestros clientes?</h2>
+          <div className="flex flex-col items-center mb-12">
+            <div className="mb-6">
+              <TestimonialsIcon />
+            </div>
+            <h2 className="section-title text-center mb-4 text-zambrano-dark-blue">Testimonios</h2>
+            <p className="text-zambrano-gray text-center max-w-2xl">¿Qué opinan nuestras pacientes sobre su experiencia?</p>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard 

@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +35,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center transition-transform duration-300 hover:scale-[1.02]">
-            <div className="text-zambrano-dark-blue font-semibold text-xl">
-              Dr. Juan C. Zambrano
-            </div>
+            <Logo />
           </a>
 
           {/* Desktop Navigation */}
