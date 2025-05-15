@@ -67,7 +67,7 @@ const Header = () => {
             </a>
             <Button 
               onClick={() => scrollToSection('valoracion')}
-              className="bg-green-500 hover:bg-green-600 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Solicita tu valoración
             </Button>
@@ -115,7 +115,7 @@ const Header = () => {
               Agenda tu cita
             </a>
             <Button 
-              className="bg-green-500 hover:bg-green-600 text-white w-full transform transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
+              className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white w-full transform transition-all duration-300 hover:scale-[1.02] hover:shadow-md"
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToSection('valoracion');
