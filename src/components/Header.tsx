@@ -55,7 +55,7 @@ const Header = () => {
             </a>
             <Button 
               onClick={() => scrollToSection('valoracion')}
-              className="bg-green-500 hover:bg-green-600 text-white"
+              className="bg-green-500 hover:bg-green-600 text-white hover:scale-105 transition-transform duration-200"
             >
               Solicita tu valoración
             </Button>

@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           <Button 
             onClick={scrollToForm}
-            className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-md flex items-center gap-2"
+            className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-md flex items-center gap-2 hover:scale-105 transition-transform duration-200"
           >
             Agenda tu consulta médica
             <ArrowDown size={20} />
