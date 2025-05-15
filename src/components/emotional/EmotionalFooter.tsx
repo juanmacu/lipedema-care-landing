@@ -1,5 +1,6 @@
 
-import { Mail, Phone, Instagram } from 'lucide-react';
+import { Mail, Phone, Instagram, MessageCircle } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const EmotionalFooter = () => {
   return (
@@ -52,8 +53,19 @@ const EmotionalFooter = () => {
                 La información proporcionada en este sitio web tiene fines informativos y no sustituye la consulta médica profesional.
               </p>
               <p className="text-gray-300 text-sm mt-4">
-                © {new Date().getFullYear()} Dr. Juan C. Zambrano. Todos los derechos reservados.
+                © {new Date().getFullYear()} Dr. Juan C. Zambrano. Todos los derechos reservados. Sitio confidencial y de uso médico.
               </p>
+              
+              <div className="mt-6 p-4 bg-zambrano-dark-blue/50 rounded-lg border border-gray-700">
+                <p className="text-white text-sm mb-3">¿Tienes dudas? Escríbenos directamente por WhatsApp.</p>
+                <Button 
+                  className="w-full bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2"
+                  onClick={() => window.open('https://wa.me/573108040097', '_blank')}
+                >
+                  <MessageCircle size={18} />
+                  <span>Enviar mensaje</span>
+                </Button>
+              </div>
             </div>
           </div>
           

@@ -13,16 +13,16 @@ const EmotionalHero = () => {
       id="inicio"
       className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-r from-[#E5DEFF] to-[#F1F0FB] flex items-center"
     >
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover opacity-15"></div>
       
-      <div className="container mx-auto px-4 py-20 md:py-28 lg:py-36 relative z-10">
+      <div className="container mx-auto px-4 py-16 md:py-24 lg:py-28 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <div className="animate-fade-in opacity-0" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight text-zambrano-dark-blue">
                 Te entendemos. El lipedema no define quién eres.
               </h1>
-              <p className="text-xl md:text-2xl mb-10 font-quicksand animate-fade-in opacity-0 text-zambrano-gray" style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
+              <p className="text-xl md:text-2xl mb-8 font-quicksand animate-fade-in opacity-0 text-zambrano-gray tracking-wide" style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
                 Juntas podemos encontrar el camino hacia tu bienestar.
               </p>
               <Button 
@@ -35,6 +35,10 @@ const EmotionalHero = () => {
                 <span className="relative">Agendar valoración</span>
                 <ArrowDown className="transition-transform duration-300 group-hover:translate-y-1" size={20} />
               </Button>
+              
+              <p className="mt-6 text-zambrano-gray animate-fade-in opacity-0" style={{ animationDelay: "800ms", animationFillMode: "forwards" }}>
+                Miles de mujeres viven con Lipedema sin saberlo. No estás sola.
+              </p>
             </div>
           </div>
           
