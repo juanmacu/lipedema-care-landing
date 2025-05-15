@@ -10,12 +10,18 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <a href="#inicio" className="flex items-center">
             <div className="text-zambrano-dark-blue font-semibold text-xl">
               Dr. Juan C. Zambrano
             </div>
@@ -23,19 +29,34 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors">
+            <a 
+              href="#inicio" 
+              className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors"
+            >
               Inicio
             </a>
-            <a href="#lipedema" className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors">
+            <a 
+              href="#lipedema" 
+              className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors"
+            >
               ¿Qué es el Lipedema?
             </a>
-            <a href="#diagnostico" className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors">
+            <a 
+              href="#diagnostico" 
+              className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors"
+            >
               Diagnóstico
             </a>
-            <a href="#valoracion" className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors">
+            <a 
+              href="#valoracion" 
+              className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors"
+            >
               Agenda tu cita
             </a>
-            <Button className="bg-green-500 hover:bg-green-600 text-white">
+            <Button 
+              onClick={() => scrollToSection('valoracion')}
+              className="bg-green-500 hover:bg-green-600 text-white"
+            >
               Solicita tu valoración
             </Button>
           </nav>
@@ -85,8 +106,7 @@ const Header = () => {
               className="bg-green-500 hover:bg-green-600 text-white w-full"
               onClick={() => {
                 setIsMenuOpen(false);
-                const section = document.getElementById('valoracion');
-                section?.scrollIntoView({ behavior: 'smooth' });
+                scrollToSection('valoracion');
               }}
             >
               Solicita tu valoración
