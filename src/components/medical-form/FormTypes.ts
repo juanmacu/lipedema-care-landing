@@ -3,6 +3,7 @@ export interface MedicalFormData {
   fullName: string;
   email: string;
   phone: string;
+  age: string;
   gender: string;
   country: string;
   weight: string;
@@ -17,6 +18,7 @@ export interface ValidationErrors {
   fullName?: string;
   email?: string;
   phone?: string;
+  age?: string;
   gender?: string;
   country?: string;
   weight?: string;

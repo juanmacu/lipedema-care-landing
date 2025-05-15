@@ -1,15 +1,13 @@
-
 import { useState, useEffect } from "react";
 import EmotionalHeader from "@/components/emotional/EmotionalHeader";
 import EmotionalHero from "@/components/emotional/EmotionalHero";
 import EmotionalLipedema from "@/components/emotional/EmotionalLipedema";
 import EmotionalStories from "@/components/emotional/EmotionalStories";
 import TeAcompanamos from "@/components/emotional/TeAcompanamos";
-import ConsultationProcess from "@/components/emotional/ConsultationProcess";
 import EmotionalFooter from "@/components/emotional/EmotionalFooter";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import MedicalForm from "@/components/MedicalForm";
+import MedicalFormWizard from "@/components/MedicalFormWizard";
 
 const LandingEmocional = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -70,7 +68,7 @@ const LandingEmocional = () => {
         <EmotionalLipedema />
         <TeAcompanamos />
         <EmotionalStories />
-        <MedicalForm />
+        <MedicalFormWizard />
       </main>
       <EmotionalFooter />
       
