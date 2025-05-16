@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import IntegradaHeader from "@/components/integrada/IntegradaHeader";
 import IntegradaHero from "@/components/integrada/IntegradaHero";
@@ -65,9 +66,16 @@ const LandingIntegrada = () => {
     <div className="flex flex-col min-h-screen bg-white">
       <IntegradaHeader />
       <main>
-        <IntegradaHero />
-        <WhatIsLipedema />
-        <IntegradaMeetDoctors />
+        {/* Agregamos ID para scrolling */}
+        <section id="inicio">
+          <IntegradaHero />
+        </section>
+        <section id="lipedema">
+          <WhatIsLipedema />
+        </section>
+        <section id="doctors">
+          <IntegradaMeetDoctors />
+        </section>
         <TeAcompanamos />
         <Testimonials />
         <section id="valoracion" className="reveal-section">

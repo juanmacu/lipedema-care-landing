@@ -34,14 +34,13 @@ const IntegradaHeader = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center transition-transform duration-300 hover:scale-[1.02] overflow-visible">
-            <div className="transform scale-[3.0] origin-left">
-              <img 
-                src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
-                alt="Logo Gaona Zambrano" 
-                className="h-16 md:h-[42px] w-auto object-contain px-1 md:px-2"
-              />
-            </div>
+          {/* Logo con ajustes para evitar sobreposición */}
+          <div className="flex items-center transition-transform duration-300 hover:scale-[1.02]">
+            <img 
+              src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
+              alt="Logo Gaona Zambrano" 
+              className="h-10 w-auto object-contain"
+            />
           </div>
           
           <nav className="hidden md:block">
