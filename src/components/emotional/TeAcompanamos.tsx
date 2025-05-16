@@ -6,17 +6,17 @@ import { QuoteIcon } from "lucide-react";
 const TeAcompanamos = () => {
   const images = [
     {
-      src: "/placeholder.svg",
+      src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9701-2.jpg",
       alt: "Dr. Zambrano en consultorio",
       title: "Diagnóstico personalizado"
     },
     {
-      src: "/placeholder.svg",
+      src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9360-2.jpg",
       alt: "Dr. Zambrano en quirófano",
       title: "Tratamiento especializado"
     },
     {
-      src: "/placeholder.svg",
+      src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/educacion%20continua.png",
       alt: "Dr. Zambrano en entrevista",
       title: "Educación continua"
     }
@@ -25,7 +25,7 @@ const TeAcompanamos = () => {
   return (
     <section className="py-12 md:py-16 bg-[#F1F0FB]">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mb-3">Te Acompañamos</h2>
+        <h2 className="text-3xl md:text-4xl font-light text-zambrano-dark-blue text-center mb-3">Te Acompañamos</h2>
         <p className="text-zambrano-gray text-center max-w-2xl mx-auto mb-12">
           Nuestro compromiso es brindarte el apoyo que necesitas en cada etapa de tu tratamiento
         </p>
@@ -36,7 +36,7 @@ const TeAcompanamos = () => {
             {images.map((image, index) => (
               <Fragment key={index}>
                 <div className="flex flex-col items-center staggered-item">
-                  <div className="relative w-full max-w-xs rounded-xl overflow-hidden shadow-lg mb-3 hover-scale">
+                  <div className="relative w-full rounded-xl overflow-hidden shadow-lg mb-3 hover-scale">
                     <img 
                       src={image.src} 
                       alt={image.alt} 
@@ -54,7 +54,7 @@ const TeAcompanamos = () => {
                     top: '30%',
                     width: '8%',
                     height: '2px',
-                    background: 'linear-gradient(to right, #96C8DC, #0E5A6E)'
+                    background: 'linear-gradient(to right, #f5b6a7, #12303a)'
                   }}></div>
                 )}
               </Fragment>

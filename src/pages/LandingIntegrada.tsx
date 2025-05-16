@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import IntegradaHeader from "@/components/integrada/IntegradaHeader";
 import IntegradaHero from "@/components/integrada/IntegradaHero";
 import WhatIsLipedema from "@/components/WhatIsLipedema";
+import TeAcompanamos from "@/components/emotional/TeAcompanamos";
 import IntegradaMeetDoctors from "@/components/integrada/IntegradaMeetDoctors";
 import MedicalFormWizard from "@/components/MedicalFormWizard";
 import IntegradaFooter from "@/components/integrada/IntegradaFooter";
@@ -67,6 +68,7 @@ const LandingIntegrada = () => {
       <main>
         <IntegradaHero />
         <WhatIsLipedema />
+        <TeAcompanamos />
         <IntegradaMeetDoctors />
         <Testimonials />
         <section id="valoracion" className="reveal-section">
