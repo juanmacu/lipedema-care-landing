@@ -23,7 +23,7 @@ const TeAcompanamos = () => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-[#F1F0FB]">
+    <section className="py-12 md:py-16 bg-white border-t border-b border-gray-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-light text-zambrano-dark-blue text-center mb-3">Te Acompañamos</h2>
         <p className="text-zambrano-gray text-center max-w-2xl mx-auto mb-12">

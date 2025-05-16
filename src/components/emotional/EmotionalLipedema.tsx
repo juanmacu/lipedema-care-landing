@@ -27,7 +27,7 @@ const EmotionalLipedema = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Bloque 1: Síntomas */}
-          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section">
+          <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section border border-gray-100">
             <div className="mb-4 flex items-center">
               <div className="h-10 w-10 rounded-full bg-zambrano-light-blue flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zambrano-dark-blue">
@@ -50,7 +50,7 @@ const EmotionalLipedema = () => {
           </div>
           
           {/* Bloque 2: ¿Por qué ocurre? */}
-          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section" style={{ animationDelay: "0.2s" }}>
+          <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section border border-gray-100" style={{ animationDelay: "0.2s" }}>
             <div className="mb-4 flex items-center">
               <div className="h-10 w-10 rounded-full bg-zambrano-light-blue flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zambrano-dark-blue">
@@ -72,7 +72,7 @@ const EmotionalLipedema = () => {
           </div>
           
           {/* Bloque 3: ¿Qué no es? */}
-          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section" style={{ animationDelay: "0.4s" }}>
+          <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section border border-gray-100" style={{ animationDelay: "0.4s" }}>
             <div className="mb-4 flex items-center">
               <div className="h-10 w-10 rounded-full bg-zambrano-light-blue flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zambrano-dark-blue">
