@@ -35,15 +35,23 @@ const FormNavigation = ({
         <Button 
           type="button" 
           onClick={onNext}
-          className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 transition-all duration-300 hover:scale-[1.02] ml-auto px-6"
+          className={`transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6 ${
+            currentStep === 1 
+              ? "bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90" 
+              : "bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white"
+          }`}
         >
-          {currentStep === 4 ? "Último paso" : "Siguiente"}
+          {currentStep === 1 
+            ? "Continuar con mis datos personales" 
+            : currentStep === 4 
+              ? "Último paso" 
+              : "Siguiente"}
         </Button>
       ) : (
         <Button 
           type="submit"
           disabled={isSubmitting}
-          className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 transition-all duration-300 hover:scale-[1.02] ml-auto px-6"
+          className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6"
         >
           {isSubmitting ? "Enviando..." : "Enviar valoración"}
         </Button>

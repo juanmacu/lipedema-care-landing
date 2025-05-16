@@ -50,6 +50,15 @@ const SelfEvaluationStep = ({
 
   return (
     <div className="space-y-6">
+      {/* Nueva introducción emocional */}
+      <div className="bg-white p-5 border border-gray-100 rounded-lg mb-6 shadow-sm">
+        <p className="text-zambrano-dark-blue text-center leading-relaxed">
+          ¿Te has sentido confundida con los síntomas en tus piernas o brazos?<br />
+          Este pequeño paso te ayudará a saber si podrías estar viviendo con Lipedema.<br />
+          No necesitas saber todo. Solo responde lo que sientas identificado.
+        </p>
+      </div>
+
       <div className="text-center mb-6">
         <h3 className="text-xl md:text-2xl font-medium text-zambrano-dark-blue">
           Autoevaluación de síntomas
