@@ -2,13 +2,13 @@
 import { useState, useEffect } from "react";
 import IntegradaHeader from "@/components/integrada/IntegradaHeader";
 import IntegradaHero from "@/components/integrada/IntegradaHero";
-import { WhatIsLipedema } from "@/components/WhatIsLipedema";
+import WhatIsLipedema from "@/components/WhatIsLipedema";
 import IntegradaMeetDoctors from "@/components/integrada/IntegradaMeetDoctors";
 import MedicalFormWizard from "@/components/MedicalFormWizard";
 import IntegradaFooter from "@/components/integrada/IntegradaFooter";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Testimonials } from "@/components/Testimonials";
+import Testimonials from "@/components/Testimonials";
 
 const LandingIntegrada = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);

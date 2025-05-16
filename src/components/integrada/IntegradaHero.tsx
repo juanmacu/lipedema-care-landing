@@ -1,12 +1,13 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Heart } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
+type AssetType = 'logo' | 'banner' | 'collage' | 'foto-doctor' | 'foto-doctora';
+
 // Custom hook to fetch branding assets
-const useBrandingAssets = (type: string) => {
+const useBrandingAssets = (type: AssetType) => {
   return useQuery({
     queryKey: ['branding-assets', type],
     queryFn: async () => {

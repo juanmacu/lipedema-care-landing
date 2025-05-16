@@ -1,10 +1,11 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
+type AssetType = 'logo' | 'banner' | 'collage' | 'foto-doctor' | 'foto-doctora';
+
 // Custom hook to fetch doctor images
-const useDoctorImage = (type: string) => {
+const useDoctorImage = (type: AssetType) => {
   return useQuery({
     queryKey: ['doctor-image', type],
     queryFn: async () => {
