@@ -2,30 +2,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Menu, X } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useQuery } from "@tanstack/react-query";
-
-// Custom hook to fetch logo from Supabase
-const useLogo = () => {
-  return useQuery({
-    queryKey: ['branding-logo'],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from('branding_assets')
-        .select('*')
-        .eq('type', 'logo')
-        .single();
-      
-      if (error) throw error;
-      return data;
-    }
-  });
-};
 
 const IntegradaHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { data: logoData, isLoading } = useLogo();
   
   // Function to handle scroll and change header style
   useEffect(() => {
@@ -55,34 +35,11 @@ const IntegradaHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            {isLoading ? (
-              <div className="flex items-center">
-                <div className="mr-2">
-                  <svg width="40" height="40" viewBox="0 0 146 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M73.5349 0C111.242 0 142.07 27.3537 146 61.3581C140.465 26.749 110.465 0 73.5349 0Z" fill="#96C8DC"/>
-                    <path d="M73.5349 122C35.8279 122 5 94.6463 0 60.6419C6.60465 95.2509 36.6047 122 73.5349 122Z" fill="#96C8DC"/>
-                    <path d="M0 60.6419C5 94.6463 35.8279 122 73.5349 122C110.465 122 140.465 95.251 146 60.642C146 60.642 73.5349 122 0 60.6419Z" fill="#0E5A6E"/>
-                    <path d="M146 61.3581C142.07 27.3537 111.242 0 73.5349 0C36.6047 0 6.60465 26.749 0 61.358C0 61.358 73.5349 0 146 61.3581Z" fill="#0E5A6E"/>
-                  </svg>
-                </div>
-                <div className="text-gray-600">
-                  <div className="text-lg font-light">GAONA ZAMBRANO</div>
-                  <div className="text-xs uppercase">CIRUJANOS PLÁSTICOS</div>
-                </div>
-              </div>
-            ) : (
-              <div className="flex items-center">
-                <img 
-                  src={logoData?.url || "/placeholder.svg"} 
-                  alt={logoData?.alt_text || "GAONA ZAMBRANO CIRUJANOS PLÁSTICOS"} 
-                  className="h-10 w-auto mr-2"
-                />
-                <div className="text-gray-600">
-                  <div className="text-lg font-light">GAONA ZAMBRANO</div>
-                  <div className="text-xs uppercase">CIRUJANOS PLÁSTICOS</div>
-                </div>
-              </div>
-            )}
+            <img 
+              src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
+              alt="Logo Gaona Zambrano" 
+              className="h-12 w-auto mr-3"
+            />
           </div>
           
           <nav className="hidden md:block">
