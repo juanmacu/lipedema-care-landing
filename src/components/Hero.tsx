@@ -13,6 +13,9 @@ const Hero = () => {
       id="inicio"
       className="relative min-h-[85vh] md:min-h-[80vh] bg-gradient-to-r from-zambrano-dark-blue to-zambrano-light-blue text-white flex items-center"
     >
+      {/* Silueta médica sutil en grafito como fondo */}
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/752b0d58-8e44-46da-8425-13111f67d9f6.png')] bg-center bg-no-repeat bg-contain opacity-[0.08] mix-blend-multiply"></div>
+      
       {/* Overlay para mejor legibilidad */}
       <div className="absolute inset-0 bg-black/20"></div>
       
