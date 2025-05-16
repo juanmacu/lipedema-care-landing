@@ -1,0 +1,185 @@
+
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { CalendarDays, Menu, X } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
+
+// Custom hook to fetch logo from Supabase
+const useLogo = () => {
+  return useQuery({
+    queryKey: ['branding-logo'],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from('branding_assets')
+        .select('*')
+        .eq('type', 'logo')
+        .single();
+      
+      if (error) throw error;
+      return data;
+    }
+  });
+};
+
+const IntegradaHeader = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { data: logoData, isLoading } = useLogo();
+  
+  // Function to handle scroll and change header style
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
+  // Function for smooth scroll
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false);
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
+  return (
+    <header 
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-white shadow-md py-2" 
+          : "bg-white/80 backdrop-blur-sm py-4"
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            {isLoading ? (
+              <div className="flex items-center">
+                <div className="mr-2">
+                  <svg width="40" height="40" viewBox="0 0 146 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M73.5349 0C111.242 0 142.07 27.3537 146 61.3581C140.465 26.749 110.465 0 73.5349 0Z" fill="#96C8DC"/>
+                    <path d="M73.5349 122C35.8279 122 5 94.6463 0 60.6419C6.60465 95.2509 36.6047 122 73.5349 122Z" fill="#96C8DC"/>
+                    <path d="M0 60.6419C5 94.6463 35.8279 122 73.5349 122C110.465 122 140.465 95.251 146 60.642C146 60.642 73.5349 122 0 60.6419Z" fill="#0E5A6E"/>
+                    <path d="M146 61.3581C142.07 27.3537 111.242 0 73.5349 0C36.6047 0 6.60465 26.749 0 61.358C0 61.358 73.5349 0 146 61.3581Z" fill="#0E5A6E"/>
+                  </svg>
+                </div>
+                <div className="text-gray-600">
+                  <div className="text-lg font-light">GAONA ZAMBRANO</div>
+                  <div className="text-xs uppercase">CIRUJANOS PLÁSTICOS</div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center">
+                <img 
+                  src={logoData?.url || "/placeholder.svg"} 
+                  alt={logoData?.alt_text || "GAONA ZAMBRANO CIRUJANOS PLÁSTICOS"} 
+                  className="h-10 w-auto mr-2"
+                />
+                <div className="text-gray-600">
+                  <div className="text-lg font-light">GAONA ZAMBRANO</div>
+                  <div className="text-xs uppercase">CIRUJANOS PLÁSTICOS</div>
+                </div>
+              </div>
+            )}
+          </div>
+          
+          <nav className="hidden md:block">
+            <ul className="flex space-x-6 items-center">
+              <li>
+                <button 
+                  onClick={() => scrollToSection('inicio')}
+                  className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  Inicio
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('lipedema')}
+                  className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  Qué es el Lipedema
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('doctors')}
+                  className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  Quiénes te acompañan
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('valoracion')}
+                  className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  Agenda tu Valoración
+                </button>
+              </li>
+            </ul>
+          </nav>
+          
+          <Button 
+            onClick={() => scrollToSection('valoracion')}
+            className="hidden md:flex items-center gap-2 bg-zambrano-dark-blue text-white hover:bg-zambrano-dark-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
+          >
+            <CalendarDays size={18} />
+            <span>Solicita tu consulta</span>
+          </Button>
+          
+          <button 
+            className="md:hidden text-zambrano-dark-blue p-1"
+            aria-label="Mobile menu"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+        
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden py-4 bg-white animate-fade-in">
+            <nav className="flex flex-col space-y-4">
+              <button 
+                onClick={() => scrollToSection('inicio')}
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+              >
+                Inicio
+              </button>
+              <button 
+                onClick={() => scrollToSection('lipedema')}
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+              >
+                Qué es el Lipedema
+              </button>
+              <button 
+                onClick={() => scrollToSection('doctors')}
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+              >
+                Quiénes te acompañan
+              </button>
+              <button 
+                onClick={() => scrollToSection('valoracion')}
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+              >
+                Agenda tu Valoración
+              </button>
+              <Button 
+                onClick={() => scrollToSection('valoracion')}
+                className="flex items-center gap-2 bg-zambrano-dark-blue text-white hover:bg-zambrano-dark-blue/90 w-full justify-center"
+              >
+                <CalendarDays size={18} />
+                <span>Solicita tu consulta</span>
+              </Button>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default IntegradaHeader;
