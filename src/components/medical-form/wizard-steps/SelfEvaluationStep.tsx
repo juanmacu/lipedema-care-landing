@@ -1,7 +1,5 @@
 
-import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 interface SelfEvaluationStepProps {
@@ -28,19 +26,7 @@ const SelfEvaluationStep = ({
     },
     {
       id: "heavyLegs",
-      question: "¿Sientes pesadez, presión o tensión en las piernas?",
-    },
-    {
-      id: "burningCramps",
-      question: "¿Has tenido sensación de ardor o calambres en las piernas?",
-    },
-    {
-      id: "skinIrritation",
-      question: "¿Notas irritación o picazón en la piel de piernas o brazos?",
-    },
-    {
-      id: "appearance",
-      question: "¿Te sientes incómoda/o con la apariencia de tus piernas?",
+      question: "¿Sientes pesadez o tensión en las piernas?",
     },
     {
       id: "weightLoss",
@@ -50,7 +36,7 @@ const SelfEvaluationStep = ({
 
   return (
     <div className="space-y-6">
-      {/* Nueva introducción emocional */}
+      {/* Introducción emocional */}
       <div className="bg-white p-5 border border-gray-100 rounded-lg mb-6 shadow-sm">
         <p className="text-zambrano-dark-blue text-center leading-relaxed">
           ¿Te has sentido confundida con los síntomas en tus piernas o brazos?<br />
@@ -61,10 +47,10 @@ const SelfEvaluationStep = ({
 
       <div className="text-center mb-6">
         <h3 className="text-xl md:text-2xl font-medium text-zambrano-dark-blue">
-          Autoevaluación de síntomas
+          ¿Te identificas con estos síntomas?
         </h3>
         <p className="text-zambrano-gray mt-2">
-          Responde a estas preguntas para ayudarnos a comprender mejor tu caso
+          Muchas personas viven con síntomas de lipedema sin saberlo. Este paso te ayudará a reflexionar sobre tu situación.
         </p>
       </div>
 

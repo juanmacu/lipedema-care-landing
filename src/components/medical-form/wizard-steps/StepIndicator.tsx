@@ -1,5 +1,4 @@
 
-// No need to modify this file, it's a read-only file
 import { cn } from "@/lib/utils";
 
 interface StepIndicatorProps {
@@ -68,11 +67,11 @@ const StepIndicator = ({ currentStep, totalSteps }: StepIndicatorProps) => {
 
 const getStepName = (step: number): string => {
   switch(step) {
-    case 1: return "Síntomas";
-    case 2: return "Datos personales";
-    case 3: return "Salud";
+    case 1: return "Datos de contacto";
+    case 2: return "Síntomas";
+    case 3: return "Detalles de salud";
     case 4: return "Fotografías";
-    case 5: return "Contacto";
+    case 5: return "Confirmación";
     default: return "";
   }
 };

@@ -59,11 +59,8 @@ export const useMedicalFormWizard = () => {
   const validateStep = (step: number): boolean => {
     switch(step) {
       case 1:
-        // No validation for self-evaluation
-        return true;
-      case 2:
-        // Validate personal info
-        if (!formData.fullName || !formData.age || !formData.gender || !formData.country) {
+        // Validate contact info
+        if (!formData.fullName || !formData.email || !formData.phone || !formData.country) {
           toast({
             title: "Campos incompletos",
             description: "Por favor completa todos los campos obligatorios.",
@@ -72,9 +69,12 @@ export const useMedicalFormWizard = () => {
           return false;
         }
         return true;
+      case 2:
+        // No validation for self-evaluation
+        return true;
       case 3:
         // Validate health details
-        if (!formData.weight || !formData.height || !formData.doctor) {
+        if (!formData.age || !formData.gender || !formData.weight || !formData.height || !formData.doctor) {
           toast({
             title: "Campos incompletos",
             description: "Por favor completa todos los campos obligatorios.",
@@ -85,7 +85,7 @@ export const useMedicalFormWizard = () => {
         return true;
       case 4:
         // Validate photo upload
-        if (!formData.images || formData.images.length < 1) {
+        if (!formData.images || formData.images.length < 3) {
           toast({
             title: "Fotografías requeridas",
             description: "Por favor sube al menos 3 fotografías.",
@@ -95,11 +95,11 @@ export const useMedicalFormWizard = () => {
         }
         return true;
       case 5:
-        // Validate contact and consent
-        if (!formData.email || !formData.phone || !formData.consent) {
+        // Validate consent
+        if (!formData.consent) {
           toast({
-            title: "Campos incompletos",
-            description: "Por favor completa todos los campos y acepta el consentimiento.",
+            title: "Consentimiento requerido",
+            description: "Por favor acepta el consentimiento para continuar.",
             variant: "destructive"
           });
           return false;
@@ -146,7 +146,7 @@ export const useMedicalFormWizard = () => {
     setTimeout(() => {
       toast({
         title: "Valoración enviada correctamente",
-        description: "Gracias por tu solicitud. Te contactaremos pronto para tu valoración.",
+        description: "Recibimos tu información. En breve te contactaremos por correo o WhatsApp.",
       });
       
       // Reset form

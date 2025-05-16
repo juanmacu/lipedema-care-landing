@@ -12,9 +12,11 @@ interface PhotoUploadStepProps {
 const PhotoUploadStep = ({ formData, handleFileChange }: PhotoUploadStepProps) => {
   return (
     <div className="space-y-6">
-      <h3 className="text-xl md:text-2xl font-semibold text-zambrano-dark-blue text-center mb-6">
-        Ayúdanos a conocer mejor tu caso
-      </h3>
+      <div className="text-center mb-6">
+        <h3 className="text-xl md:text-2xl font-medium text-zambrano-dark-blue">
+          Adjunta tus fotografías para una mejor valoración
+        </h3>
+      </div>
       
       <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
         <div className="flex items-center gap-3 mb-4">
@@ -62,7 +64,7 @@ const PhotoUploadStep = ({ formData, handleFileChange }: PhotoUploadStepProps) =
             required
           />
           <p className="text-xs text-zambrano-gray mt-3">
-            Por favor, usa fondo neutro y evita selfies para una mejor valoración médica.
+            Usa fondo neutro y evita selfies para una mejor valoración médica.
             <br />
             Formatos aceptados: JPG, PNG, PDF
           </p>

@@ -18,6 +18,24 @@ const FormNavigation = ({
   onSubmit,
   isSubmitting
 }: FormNavigationProps) => {
+  // Button text based on current step
+  const getNextButtonText = () => {
+    switch(currentStep) {
+      case 1:
+        return "Continuar con mi autoevaluación";
+      case 2:
+        return "Continuar con mis datos de salud";
+      case 3:
+        return "Continuar con mis fotografías";
+      case 4:
+        return "Último paso";
+      case 5:
+        return "Enviar mi valoración";
+      default:
+        return "Siguiente";
+    }
+  };
+
   return (
     <div className="flex justify-between mt-8">
       {currentStep > 1 && (
@@ -36,24 +54,20 @@ const FormNavigation = ({
           type="button" 
           onClick={onNext}
           className={`transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6 ${
-            currentStep === 1 
+            currentStep === 2 
               ? "bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90" 
               : "bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white"
           }`}
         >
-          {currentStep === 1 
-            ? "Continuar con mis datos personales" 
-            : currentStep === 4 
-              ? "Último paso" 
-              : "Siguiente"}
+          {getNextButtonText()}
         </Button>
       ) : (
         <Button 
           type="submit"
           disabled={isSubmitting}
-          className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6"
+          className="bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6"
         >
-          {isSubmitting ? "Enviando..." : "Enviar valoración"}
+          {isSubmitting ? "Enviando..." : "Enviar mi valoración"}
         </Button>
       )}
     </div>

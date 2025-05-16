@@ -1,9 +1,9 @@
 
+import ContactInfoStep from "../wizard-steps/ContactInfoStep";
 import SelfEvaluationStep from "../wizard-steps/SelfEvaluationStep";
-import PersonalInfoStep from "../wizard-steps/PersonalInfoStep";
 import HealthDetailsStep from "../wizard-steps/HealthDetailsStep";
 import PhotoUploadStep from "../wizard-steps/PhotoUploadStep";
-import ContactConsentStep from "../wizard-steps/ContactConsentStep";
+import ConfirmationStep from "../wizard-steps/ConfirmationStep";
 import { MedicalFormData } from "../FormTypes";
 
 interface StepRendererProps {
@@ -28,17 +28,17 @@ const StepRenderer = ({
   switch(currentStep) {
     case 1:
       return (
-        <SelfEvaluationStep 
+        <ContactInfoStep 
           formData={formData}
-          handleSymptomsChange={handleSymptomsChange}
+          handleChange={handleChange}
+          handleSelectChange={handleSelectChange}
         />
       );
     case 2:
       return (
-        <PersonalInfoStep 
+        <SelfEvaluationStep 
           formData={formData}
-          handleChange={handleChange}
-          handleSelectChange={handleSelectChange}
+          handleSymptomsChange={handleSymptomsChange}
         />
       );
     case 3:
@@ -58,7 +58,7 @@ const StepRenderer = ({
       );
     case 5:
       return (
-        <ContactConsentStep
+        <ConfirmationStep
           formData={formData}
           handleChange={handleChange}
           isSubmitting={isSubmitting}
