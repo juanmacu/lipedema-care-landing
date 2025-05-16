@@ -30,7 +30,7 @@ const ConsentField = ({ formData, handleChange }: ConsentFieldProps) => {
           id="consent"
           checked={formData.consent}
           onCheckedChange={handleCheckboxChange}
-          className="mt-1 data-[state=checked]:bg-zambrano-dark-blue data-[state=checked]:border-zambrano-dark-blue"
+          className="mt-1 data-[state=checked]:bg-zambrano-light-blue data-[state=checked]:border-zambrano-dark-blue"
         />
         <Label htmlFor="consent" className="text-sm text-zambrano-gray">
           Autorizo el tratamiento de mis datos personales para fines médicos según la Ley de Protección de Datos. 

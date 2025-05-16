@@ -57,15 +57,15 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
         },
-        // Custom colors for Dr. Zambrano
+        // Custom colors for Dr. Zambrano - updated palette
         zambrano: {
-          'dark-blue': '#0E5A6E',
-          'light-blue': '#96C8DC',
-          'gray': '#5A5A5A',
-          'beige': '#F5EFE7',
-          'tan': '#D2B48C',
-          'light-gray': '#E6E6E6',
-          'dark-gray': '#3A3A3A',
+          'dark-blue': '#12303a',  // Updated to azul petróleo
+          'light-blue': '#f5b6a7', // Updated to rosa cálido
+          'gray': '#5A5A5A',       // Kept as is
+          'beige': '#F5EFE7',      // Kept for backup
+          'tan': '#D2B48C',        // Kept for backup
+          'light-gray': '#E6E6E6', // Kept for backup
+          'dark-gray': '#3A3A3A',  // Kept for backup
         },
       },
       borderRadius: {

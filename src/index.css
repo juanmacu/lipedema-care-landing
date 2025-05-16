@@ -16,24 +16,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 196 76% 24%;
+    --primary: 196 54% 15%; /* Updated to match #12303a */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 199 37% 73%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 10 84% 81%; /* Updated to match #f5b6a7 */
+    --secondary-foreground: 196 54% 15%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 10 84% 81%;
+    --accent-foreground: 196 54% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 196 54% 15%;
 
     --radius: 0.5rem;
   }
@@ -56,11 +56,11 @@
   }
 
   .btn-primary {
-    @apply bg-zambrano-dark-blue hover:bg-opacity-90 text-white py-3 px-6 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md;
+    @apply bg-zambrano-light-blue hover:bg-opacity-90 text-zambrano-dark-blue py-3 px-6 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md;
   }
   
   .btn-accent {
-    @apply bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white py-3 px-6 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md;
+    @apply bg-zambrano-light-blue hover:bg-zambrano-light-blue/90 text-zambrano-dark-blue py-3 px-6 rounded-md transition-all duration-300 hover:scale-105 hover:shadow-md;
   }
 
   .section-title {
@@ -122,4 +122,3 @@
 .staggered-item.visible {
   animation: fadeInUp 0.5s ease-out forwards;
 }
-

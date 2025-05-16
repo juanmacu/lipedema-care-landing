@@ -83,7 +83,7 @@ const IntegradaHeader = () => {
           
           <Button 
             onClick={() => scrollToSection('valoracion')}
-            className="hidden md:flex items-center gap-2 bg-zambrano-dark-blue text-white hover:bg-zambrano-dark-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
+            className="hidden md:flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
           >
             <CalendarDays size={18} />
             <span>Solicita tu consulta</span>
@@ -128,7 +128,7 @@ const IntegradaHeader = () => {
               </button>
               <Button 
                 onClick={() => scrollToSection('valoracion')}
-                className="flex items-center gap-2 bg-zambrano-dark-blue text-white hover:bg-zambrano-dark-blue/90 w-full justify-center"
+                className="flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 w-full justify-center"
               >
                 <CalendarDays size={18} />
                 <span>Solicita tu consulta</span>

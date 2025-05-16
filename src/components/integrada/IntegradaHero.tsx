@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Heart } from "lucide-react";
@@ -37,7 +38,7 @@ const IntegradaHero = () => {
   return (
     <section 
       id="inicio"
-      className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-r from-[#E5F2F7] to-[#F0F7FB] flex items-center pt-20"
+      className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-r from-white to-[#FFF5F2] flex items-center pt-20"
     >
       {/* Background image/collage with overlay */}
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover opacity-15">
@@ -63,7 +64,7 @@ const IntegradaHero = () => {
               <Button 
                 onClick={() => scrollToSection('valoracion')}
                 size="lg"
-                className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white px-8 py-6 text-lg rounded-md flex items-center gap-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg group animate-fade-in opacity-0"
+                className="bg-zambrano-light-blue hover:bg-zambrano-light-blue/90 text-zambrano-dark-blue px-8 py-6 text-lg rounded-md flex items-center gap-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg group animate-fade-in opacity-0"
                 style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
               >
                 <Heart className="mr-1" />
