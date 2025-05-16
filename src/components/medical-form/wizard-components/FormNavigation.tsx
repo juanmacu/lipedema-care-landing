@@ -25,7 +25,7 @@ const FormNavigation = ({
           type="button" 
           variant="outline"
           onClick={onPrev}
-          className="px-6"
+          className="px-6 hover:bg-gray-50 transition-colors"
         >
           Atrás
         </Button>
