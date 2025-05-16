@@ -1,13 +1,14 @@
 
 import React from 'react';
 import { Check } from 'lucide-react';
+import { Separator } from "@/components/ui/separator";
 
 interface SymptomItemProps {
   title: string;
 }
 
 const SymptomItem = ({ title }: SymptomItemProps) => (
-  <div className="flex items-center mb-3">
+  <div className="flex items-center mb-3 staggered-item">
     <div className="bg-zambrano-dark-blue rounded-full p-1 mr-3 text-white">
       <Check size={16} />
     </div>
@@ -49,7 +50,7 @@ const EmotionalLipedema = () => {
           </div>
           
           {/* Bloque 2: ¿Por qué ocurre? */}
-          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section">
+          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section" style={{ animationDelay: "0.2s" }}>
             <div className="mb-4 flex items-center">
               <div className="h-10 w-10 rounded-full bg-zambrano-light-blue flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zambrano-dark-blue">
@@ -71,7 +72,7 @@ const EmotionalLipedema = () => {
           </div>
           
           {/* Bloque 3: ¿Qué no es? */}
-          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section">
+          <div className="bg-[#F1F0FB] rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300 reveal-section" style={{ animationDelay: "0.4s" }}>
             <div className="mb-4 flex items-center">
               <div className="h-10 w-10 rounded-full bg-zambrano-light-blue flex items-center justify-center mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-zambrano-dark-blue">
@@ -93,7 +94,7 @@ const EmotionalLipedema = () => {
           </div>
         </div>
         
-        <p className="text-center text-zambrano-gray text-lg mt-10 max-w-xl mx-auto">
+        <p className="text-center text-zambrano-gray text-lg mt-10 max-w-xl mx-auto reveal-section" style={{ animationDelay: "0.6s" }}>
           El lipedema requiere un diagnóstico especializado y un tratamiento personalizado para cada paciente.
         </p>
       </div>
