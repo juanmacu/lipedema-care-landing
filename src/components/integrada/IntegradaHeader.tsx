@@ -35,7 +35,7 @@ const IntegradaHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center transition-transform duration-300 hover:scale-[1.02] overflow-visible">
-            <div className="transform scale-[2.0] origin-left">
+            <div className="transform scale-[3.0] origin-left">
               <img 
                 src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
                 alt="Logo Gaona Zambrano" 
