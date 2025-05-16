@@ -29,16 +29,16 @@ const IntegradaHeader = () => {
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
           ? "bg-white shadow-md py-2" 
-          : "bg-white/80 backdrop-blur-sm py-4"
+          : "bg-white/80 backdrop-blur-sm py-3"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center transition-transform duration-300 hover:scale-[1.02]">
             <img 
               src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
               alt="Logo Gaona Zambrano" 
-              className="h-16 md:h-20 w-auto mr-3"
+              className="h-16 md:h-[64px] w-auto object-contain px-2 md:px-4"
             />
           </div>
           
