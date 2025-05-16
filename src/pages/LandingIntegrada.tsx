@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import IntegradaHeader from "@/components/integrada/IntegradaHeader";
 import IntegradaHero from "@/components/integrada/IntegradaHero";
@@ -68,8 +67,8 @@ const LandingIntegrada = () => {
       <main>
         <IntegradaHero />
         <WhatIsLipedema />
-        <TeAcompanamos />
         <IntegradaMeetDoctors />
+        <TeAcompanamos />
         <Testimonials />
         <section id="valoracion" className="reveal-section">
           <MedicalFormWizard />

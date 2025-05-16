@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
@@ -53,24 +54,23 @@ const IntegradaMeetDoctors = () => {
               )}
             </div>
             <CardContent className="p-6">
-              <h3 className="text-2xl font-medium text-zambrano-dark-blue mb-2">Dr. Juan C. Zambrano</h3>
+              <h3 className="text-2xl font-medium text-zambrano-dark-blue mb-2">Dr. Juan Carlos Zambrano</h3>
               <p className="text-zambrano-light-blue font-medium mb-4">Cirujano Plástico</p>
               <p className="text-gray-700 mb-4">
-                Especialista en lipedema con más de 15 años de experiencia clínica, formado en prestigiosas universidades
-                y dedicado al diagnóstico y tratamiento quirúrgico de esta enfermedad. El Dr. Zambrano ha desarrollado técnicas 
-                especiales para el tratamiento de lipedema en todas sus etapas.
+                Cirujano plástico especializado en el tratamiento del lipedema y estética facial. Mi enfoque no solo busca 
+                realzar la belleza, sino también mejorar el bienestar físico y emocional de las personas que enfrentan el 
+                lipedema. Con más de 15 años de experiencia y una formación avanzada en prestigiosas instituciones, me dedico 
+                a ofrecer soluciones quirúrgicas seguras y personalizadas.
               </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                <span className="bg-zambrano-light-blue/20 text-zambrano-dark-blue px-3 py-1 rounded-full text-sm">
-                  Lipedema
-                </span>
-                <span className="bg-zambrano-light-blue/20 text-zambrano-dark-blue px-3 py-1 rounded-full text-sm">
-                  Liposucción WAL
-                </span>
-                <span className="bg-zambrano-light-blue/20 text-zambrano-dark-blue px-3 py-1 rounded-full text-sm">
-                  Recuperación Asistida
-                </span>
-              </div>
+              <p className="text-gray-700 mb-4">
+                Además de mi experiencia en el tratamiento del lipedema, cuento con una sólida formación en estética facial, 
+                lo que me permite ofrecer un enfoque integral que combina el bienestar corporal con la belleza natural. Cada 
+                tratamiento que realizo está diseñado para cuidar y restaurar la confianza, siempre respetando las proporciones 
+                únicas y la individualidad de cada paciente.
+              </p>
+              <p className="text-gray-700 font-medium">
+                Juntos trabajaremos para mejorar tu salud y tu calidad de vida.
+              </p>
             </CardContent>
           </Card>
 
@@ -91,32 +91,20 @@ const IntegradaMeetDoctors = () => {
               <h3 className="text-2xl font-medium text-zambrano-dark-blue mb-2">Dra. Jennifer Gaona</h3>
               <p className="text-zambrano-light-blue font-medium mb-4">Cirujana Plástica</p>
               <p className="text-gray-700 mb-4">
-                Especializada en el manejo integral y quirúrgico del lipedema con enfoque en el bienestar 
-                emocional de las pacientes. La Dra. Gaona cuenta con estudios avanzados en técnicas modernas 
-                para el tratamiento de esta condición, brindando atención personalizada para cada caso.
+                Cirujana plástica con formación especializada en cirugía corporal femenina y experiencia en el abordaje 
+                quirúrgico del lipedema. Mi enfoque va más allá de lo estético: entiendo el impacto físico, emocional 
+                y social que genera esta condición en la vida de las mujeres.
               </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                <span className="bg-zambrano-light-blue/20 text-zambrano-dark-blue px-3 py-1 rounded-full text-sm">
-                  Acompañamiento Integral
-                </span>
-                <span className="bg-zambrano-light-blue/20 text-zambrano-dark-blue px-3 py-1 rounded-full text-sm">
-                  Lipedema
-                </span>
-                <span className="bg-zambrano-light-blue/20 text-zambrano-dark-blue px-3 py-1 rounded-full text-sm">
-                  Evaluación Personalizada
-                </span>
-              </div>
+              <p className="text-gray-700 mb-4">
+                He dedicado mi práctica a ofrecer soluciones seguras y personalizadas a través de técnicas avanzadas 
+                como la liposucción especializada en lipedema. Trabajo contigo para aliviar síntomas como el dolor, 
+                la pesadez y la inflamación, mientras buscamos restaurar tu bienestar y devolverle armonía a tu cuerpo.
+              </p>
+              <p className="text-gray-700 font-medium">
+                Desde el primer contacto, te acompaño con empatía y compromiso para que sientas confianza en cada paso del camino.
+              </p>
             </CardContent>
           </Card>
-        </div>
-
-        <div className="mt-16 text-center reveal-section">
-          <h3 className="text-2xl text-zambrano-dark-blue mb-6">Nuestro compromiso</h3>
-          <p className="text-lg text-zambrano-gray max-w-3xl mx-auto">
-            Te guiamos en un recorrido personalizado para el diagnóstico y tratamiento de tu lipedema, con un 
-            enfoque que integra salud física y bienestar emocional. Entendemos que cada paciente es única 
-            y merece un tratamiento adecuado a sus necesidades específicas.
-          </p>
         </div>
       </div>
     </section>

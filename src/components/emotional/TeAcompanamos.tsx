@@ -27,7 +27,9 @@ const TeAcompanamos = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-light text-zambrano-dark-blue text-center mb-3">Te Acompañamos</h2>
         <p className="text-zambrano-gray text-center max-w-2xl mx-auto mb-12">
-          Nuestro compromiso es brindarte el apoyo que necesitas en cada etapa de tu tratamiento
+          Te guiamos en un recorrido personalizado para el diagnóstico y tratamiento de tu lipedema, con un 
+          enfoque que integra salud física y bienestar emocional. Entendemos que cada paciente es única 
+          y merece un tratamiento adecuado a sus necesidades específicas.
         </p>
         
         <div className="relative mb-16 reveal-section">
