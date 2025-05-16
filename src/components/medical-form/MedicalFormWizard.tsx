@@ -7,6 +7,7 @@ import PersonalInfoStep from "./wizard-steps/PersonalInfoStep";
 import HealthDetailsStep from "./wizard-steps/HealthDetailsStep";
 import PhotoUploadStep from "./wizard-steps/PhotoUploadStep";
 import ContactConsentStep from "./wizard-steps/ContactConsentStep";
+import SelfEvaluationStep from "./wizard-steps/SelfEvaluationStep";
 import StepIndicator from "./wizard-steps/StepIndicator";
 
 const MedicalFormWizard = () => {
@@ -26,9 +27,10 @@ const MedicalFormWizard = () => {
     comments: "",
     images: null,
     consent: false,
+    symptoms: {},
   });
 
-  const totalSteps = 4;
+  const totalSteps = 5;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
@@ -51,9 +53,22 @@ const MedicalFormWizard = () => {
     }
   };
 
+  const handleSymptomsChange = (symptom: string, value: boolean) => {
+    setFormData({
+      ...formData,
+      symptoms: {
+        ...formData.symptoms,
+        [symptom]: value
+      }
+    });
+  };
+
   const validateStep = (step: number): boolean => {
     switch(step) {
       case 1:
+        // No validation for self-evaluation
+        return true;
+      case 2:
         // Validate personal info
         if (!formData.fullName || !formData.age || !formData.gender || !formData.country) {
           toast({
@@ -64,7 +79,7 @@ const MedicalFormWizard = () => {
           return false;
         }
         return true;
-      case 2:
+      case 3:
         // Validate health details
         if (!formData.weight || !formData.height || !formData.doctor) {
           toast({
@@ -75,7 +90,7 @@ const MedicalFormWizard = () => {
           return false;
         }
         return true;
-      case 3:
+      case 4:
         // Validate photo upload
         if (!formData.images || formData.images.length < 1) {
           toast({
@@ -86,7 +101,7 @@ const MedicalFormWizard = () => {
           return false;
         }
         return true;
-      case 4:
+      case 5:
         // Validate contact and consent
         if (!formData.email || !formData.phone || !formData.consent) {
           toast({
@@ -155,6 +170,7 @@ const MedicalFormWizard = () => {
         comments: "",
         images: null,
         consent: false,
+        symptoms: {},
       });
       
       setCurrentStep(1);
@@ -166,15 +182,14 @@ const MedicalFormWizard = () => {
     switch(currentStep) {
       case 1:
         return (
-          <PersonalInfoStep 
+          <SelfEvaluationStep 
             formData={formData}
-            handleChange={handleChange}
-            handleSelectChange={handleSelectChange}
+            handleSymptomsChange={handleSymptomsChange}
           />
         );
       case 2:
         return (
-          <HealthDetailsStep 
+          <PersonalInfoStep 
             formData={formData}
             handleChange={handleChange}
             handleSelectChange={handleSelectChange}
@@ -182,12 +197,20 @@ const MedicalFormWizard = () => {
         );
       case 3:
         return (
+          <HealthDetailsStep 
+            formData={formData}
+            handleChange={handleChange}
+            handleSelectChange={handleSelectChange}
+          />
+        );
+      case 4:
+        return (
           <PhotoUploadStep 
             formData={formData}
             handleFileChange={handleFileChange}
           />
         );
-      case 4:
+      case 5:
         return (
           <ContactConsentStep
             formData={formData}
@@ -241,7 +264,7 @@ const MedicalFormWizard = () => {
                     onClick={nextStep}
                     className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 transition-all duration-300 hover:scale-[1.02] ml-auto px-6"
                   >
-                    {currentStep === 3 ? "Último paso" : "Siguiente"}
+                    {currentStep === 4 ? "Último paso" : "Siguiente"}
                   </Button>
                 ) : (
                   <Button 
