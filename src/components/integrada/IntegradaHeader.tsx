@@ -38,7 +38,7 @@ const IntegradaHeader = () => {
             <img 
               src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
               alt="Logo Gaona Zambrano" 
-              className="h-16 md:h-[64px] w-auto object-contain px-2 md:px-4"
+              className="h-20 md:h-[80px] w-auto object-contain px-2 md:px-4"
             />
           </div>
           
