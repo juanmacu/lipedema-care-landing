@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 const LandingIntegrada = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
   
-  // Effect for scroll animations
+  // Effect for scroll animations and scroll to section functionality
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('.reveal-section');
@@ -61,6 +61,13 @@ const LandingIntegrada = () => {
     });
   };
   
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <IntegradaHeader />
@@ -97,7 +104,7 @@ const LandingIntegrada = () => {
       {/* Mobile Floating CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg border-t border-gray-100 z-30">
         <Button 
-          onClick={() => document.getElementById('valoracion')?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() => scrollToSection('valoracion')}
           className="w-full bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white py-3"
         >
           Agenda tu consulta
