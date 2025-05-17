@@ -38,14 +38,27 @@ const IntegradaHero = () => {
   return (
     <section 
       id="inicio"
-      className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-br from-white via-white to-zambrano-light-blue/10 flex items-center pt-20"
+      className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-br from-white via-white to-zambrano-light-blue/20 flex items-center pt-20"
     >
       {/* Silueta médica sutil en grafito como fondo */}
       <div className="absolute inset-0 bg-[url('/lovable-uploads/752b0d58-8e44-46da-8425-13111f67d9f6.png')] bg-right-top bg-no-repeat bg-contain opacity-[0.04] mix-blend-multiply"></div>
       
-      {/* Elementos decorativos sutiles */}
-      <div className="absolute top-1/4 right-1/3 w-64 h-64 bg-zambrano-light-blue/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-zambrano-dark-blue/5 rounded-full blur-3xl"></div>
+      {/* Elementos decorativos inspirados en la portada */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Elementos decorativos sutiles inspirados en la portada */}
+        <div className="absolute top-20 left-4 w-16 h-16 border-t-2 border-l-2 border-zambrano-light-blue/20 rounded-tl-3xl"></div>
+        <div className="absolute bottom-20 right-4 w-16 h-16 border-b-2 border-r-2 border-zambrano-light-blue/20 rounded-br-3xl"></div>
+        <div className="absolute top-1/4 right-10 w-8 h-8 border-2 border-zambrano-light-blue/10 rounded-full"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-10 h-10 border-2 border-zambrano-light-blue/10 rounded-full"></div>
+        
+        {/* Líneas decorativas sutiles */}
+        <div className="absolute top-1/3 right-1/4 w-24 h-1 bg-zambrano-light-blue/10 rounded-full transform rotate-45"></div>
+        <div className="absolute bottom-1/4 left-10 w-16 h-1 bg-zambrano-light-blue/10 rounded-full transform -rotate-45"></div>
+        
+        {/* Círculos difuminados */}
+        <div className="absolute top-1/4 right-1/3 w-64 h-64 bg-zambrano-light-blue/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-zambrano-dark-blue/5 rounded-full blur-3xl"></div>
+      </div>
       
       <div className="container mx-auto px-4 py-16 md:py-24 lg:py-28 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
@@ -76,6 +89,12 @@ const IntegradaHero = () => {
           
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
             <div className="relative rounded-2xl overflow-hidden shadow-lg animate-fade-in opacity-0" style={{ animationDelay: "300ms", animationFillMode: "forwards" }}>
+              {/* Elementos decorativos sutiles en las esquinas */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-white/50 rounded-tl-lg z-10"></div>
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-white/50 rounded-tr-lg z-10"></div>
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-white/50 rounded-bl-lg z-10"></div>
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-white/50 rounded-br-lg z-10"></div>
+              
               {/* Hero image - collage of both doctors */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
                 <div className="aspect-square overflow-hidden bg-white">
