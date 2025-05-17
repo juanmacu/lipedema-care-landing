@@ -9,7 +9,6 @@ import MedicalFormWizard from "@/components/MedicalFormWizard";
 import IntegradaFooter from "@/components/integrada/IntegradaFooter";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Testimonials from "@/components/Testimonials";
 
 const LandingIntegrada = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -77,7 +76,6 @@ const LandingIntegrada = () => {
           <IntegradaMeetDoctors />
         </section>
         <TeAcompanamos />
-        <Testimonials />
         <section id="valoracion" className="reveal-section">
           <MedicalFormWizard />
         </section>
@@ -90,6 +88,7 @@ const LandingIntegrada = () => {
           onClick={scrollToTop} 
           size="icon"
           className="bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+          aria-label="Volver arriba"
         >
           <ArrowUp />
         </Button>

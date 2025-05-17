@@ -1,7 +1,8 @@
 
-import { ExternalLink, Heart, Mail, MapPin, Phone } from "lucide-react";
+import { ExternalLink, Heart, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
+import Logo from "@/components/Logo";
 
 // Custom hook to fetch logo from Supabase
 const useLogo = () => {
@@ -27,38 +28,11 @@ const IntegradaFooter = () => {
   return (
     <footer className="bg-zambrano-dark-blue text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and brief description */}
           <div className="col-span-1">
             <div className="flex items-center mb-6">
-              {isLoading ? (
-                <div className="flex items-center">
-                  <div className="mr-2">
-                    <svg width="40" height="40" viewBox="0 0 146 122" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M73.5349 0C111.242 0 142.07 27.3537 146 61.3581C140.465 26.749 110.465 0 73.5349 0Z" fill="#f5b6a7"/>
-                      <path d="M73.5349 122C35.8279 122 5 94.6463 0 60.6419C6.60465 95.2509 36.6047 122 73.5349 122Z" fill="#f5b6a7"/>
-                      <path d="M0 60.6419C5 94.6463 35.8279 122 73.5349 122C110.465 122 140.465 95.251 146 60.642C146 60.642 73.5349 122 0 60.6419Z" fill="#FFFFFF"/>
-                      <path d="M146 61.3581C142.07 27.3537 111.242 0 73.5349 0C36.6047 0 6.60465 26.749 0 61.358C0 61.358 73.5349 0 146 61.3581Z" fill="#FFFFFF"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-lg font-light">GAONA ZAMBRANO</div>
-                    <div className="text-xs uppercase">CIRUJANOS PLÁSTICOS</div>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex items-center">
-                  <img 
-                    src={logoData?.url || "/placeholder.svg"} 
-                    alt={logoData?.alt_text || "GAONA ZAMBRANO CIRUJANOS PLÁSTICOS"} 
-                    className="h-10 w-auto mr-2"
-                  />
-                  <div>
-                    <div className="text-lg font-light">GAONA ZAMBRANO</div>
-                    <div className="text-xs uppercase">CIRUJANOS PLÁSTICOS</div>
-                  </div>
-                </div>
-              )}
+              <Logo className="text-white" />
             </div>
             <p className="mb-4 text-gray-300">
               Especialistas en el diagnóstico y tratamiento integral del Lipedema, enfocados en tu bienestar físico y emocional.
@@ -69,48 +43,73 @@ const IntegradaFooter = () => {
             </div>
           </div>
 
-          {/* Quick links */}
+          {/* Dr. Juan C. Zambrano social links */}
           <div className="col-span-1">
-            <h3 className="text-lg font-medium mb-6">Navegación</h3>
+            <h3 className="text-lg font-medium mb-4">Dr. Juan C. Zambrano</h3>
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="#inicio" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                  href="https://www.instagram.com/drjuanzambrano" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
-                  <span>Inicio</span>
+                  <Instagram size={18} />
+                  <span>@drjuanzambrano</span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="#lipedema" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                  href="mailto:jc.zambrano.b@gmail.com" 
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
-                  <span>Qué es el Lipedema</span>
+                  <Mail size={18} />
+                  <span>jc.zambrano.b@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="#doctors" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                  href="tel:+573108040097" 
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
-                  <span>Quiénes te acompañan</span>
+                  <Phone size={18} />
+                  <span>+57 310 804 0097</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Dra. Jennifer Gaona social links */}
+          <div className="col-span-1">
+            <h3 className="text-lg font-medium mb-4">Dra. Jennifer Gaona</h3>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="https://www.instagram.com/drajenniferga" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+                >
+                  <Instagram size={18} />
+                  <span>@drajenniferga</span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="#testimonios" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                  href="mailto:jennifergaonaplastic@gmail.com" 
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
-                  <span>Testimonios</span>
+                  <Mail size={18} />
+                  <span>jennifergaonaplastic@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a 
-                  href="#valoracion" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+                  href="tel:+573045826329" 
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
-                  <span>Agenda tu valoración</span>
+                  <Phone size={18} />
+                  <span>+57 304 582 6329</span>
                 </a>
               </li>
             </ul>
@@ -118,7 +117,7 @@ const IntegradaFooter = () => {
 
           {/* Contact information */}
           <div className="col-span-1">
-            <h3 className="text-lg font-medium mb-6">Contacto</h3>
+            <h3 className="text-lg font-medium mb-4">Contacto</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-zambrano-light-blue mt-1" />
@@ -132,44 +131,16 @@ const IntegradaFooter = () => {
                 <Mail size={18} className="text-zambrano-light-blue" />
                 <a href="mailto:info@lipedemacare.com" className="text-gray-300 hover:text-white">info@lipedemacare.com</a>
               </li>
+              <li>
+                <p className="text-sm text-gray-300 mt-4">
+                  Conoce más sobre el Lipedema:
+                </p>
+                <a href="https://www.lipedema.org/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-zambrano-light-blue hover:underline">
+                  <span>Lipedema Foundation</span>
+                  <ExternalLink size={14} />
+                </a>
+              </li>
             </ul>
-          </div>
-
-          {/* Social media links */}
-          <div className="col-span-1">
-            <h3 className="text-lg font-medium mb-6">Síguenos</h3>
-            <div className="flex gap-4 mb-6">
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-              </a>
-              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-              </a>
-              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
-              </a>
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                </svg>
-              </a>
-            </div>
-            <div className="text-sm text-gray-300">
-              <p className="mb-2">Conoce más sobre el Lipedema:</p>
-              <a href="https://www.lipedema.org/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-zambrano-light-blue hover:underline">
-                <span>Lipedema Foundation</span>
-                <ExternalLink size={14} />
-              </a>
-            </div>
           </div>
         </div>
 

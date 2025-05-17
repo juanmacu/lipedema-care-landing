@@ -59,10 +59,10 @@ const IntegradaHero = () => {
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <div className="animate-fade-in opacity-0" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight text-zambrano-dark-blue">
-                Comprensión, experiencia y acompañamiento.
+                Lipedema: una enfermedad silenciosa, pero no estás sola
               </h1>
               <p className="text-xl md:text-2xl mb-8 font-quicksand animate-fade-in opacity-0 text-zambrano-gray tracking-wide" style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
-                Estamos aquí para ayudarte a entender y tratar el Lipedema.
+                Sabemos lo difícil que es obtener un diagnóstico claro de lipedema. Por eso, nuestro equipo liderado por la Dra. Jennifer Gaona y el Dr. Juan C. Zambrano te acompaña con un enfoque humano y especializado.
               </p>
               <Button 
                 onClick={() => scrollToSection('valoracion')}
@@ -71,7 +71,7 @@ const IntegradaHero = () => {
                 style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
               >
                 <Heart className="mr-1" />
-                <span className="relative">Agendar valoración</span>
+                <span className="relative">Agenda tu valoración médica</span>
                 <ArrowDown className="transition-transform duration-300 group-hover:translate-y-1" size={20} />
               </Button>
               
@@ -119,7 +119,11 @@ const IntegradaHero = () => {
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button onClick={() => scrollToSection('lipedema')} className="text-zambrano-dark-blue">
+        <button 
+          onClick={() => scrollToSection('lipedema')} 
+          className="text-zambrano-dark-blue hover:text-zambrano-light-blue transition-colors p-2"
+          aria-label="Scroll to lipedema section"
+        >
           <ArrowDown size={30} />
         </button>
       </div>
