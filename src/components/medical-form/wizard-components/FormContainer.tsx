@@ -1,0 +1,19 @@
+
+import React, { ReactNode, FormEvent } from "react";
+
+interface FormContainerProps {
+  children: ReactNode;
+  onSubmit: (e: FormEvent) => void;
+}
+
+const FormContainer = ({ children, onSubmit }: FormContainerProps) => {
+  return (
+    <div id="form-wizard" className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
+      <form onSubmit={onSubmit} className="p-6 md:p-8">
+        {children}
+      </form>
+    </div>
+  );
+};
+
+export default FormContainer;
