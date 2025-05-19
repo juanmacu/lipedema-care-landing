@@ -12,6 +12,7 @@ export interface MedicalFormData {
   comments: string;
   images: FileList | null;
   consent: boolean;
+  newsletter?: boolean; // Added newsletter consent
   symptoms?: {
     [key: string]: boolean;
   };

@@ -20,6 +20,7 @@ export const useMedicalFormWizard = () => {
     comments: "",
     images: null,
     consent: false,
+    newsletter: false,
     symptoms: {},
   });
 
@@ -56,6 +57,24 @@ export const useMedicalFormWizard = () => {
     });
   };
 
+  const countRequiredPhotoTypes = () => {
+    if (!formData.images) return 0;
+    
+    const hasUniqueFront = Array.from(formData.images).some(file => 
+      file.name.startsWith('front-')
+    );
+    
+    const hasUniqueSide = Array.from(formData.images).some(file => 
+      file.name.startsWith('side-')
+    );
+    
+    const hasUniqueBack = Array.from(formData.images).some(file => 
+      file.name.startsWith('back-')
+    );
+    
+    return (hasUniqueFront ? 1 : 0) + (hasUniqueSide ? 1 : 0) + (hasUniqueBack ? 1 : 0);
+  };
+
   const validateStep = (step: number): boolean => {
     switch(step) {
       case 1:
@@ -84,11 +103,13 @@ export const useMedicalFormWizard = () => {
         }
         return true;
       case 4:
-        // Validate photo upload
-        if (!formData.images || formData.images.length < 3) {
+        // Validate photo upload - using our new approach with labeled photos
+        const photoCount = countRequiredPhotoTypes();
+        
+        if (photoCount < 3) {
           toast({
-            title: "Fotografías requeridas",
-            description: "Por favor sube al menos 3 fotografías.",
+            title: "Fotografías incompletas",
+            description: `Por favor sube las 3 fotografías requeridas. Faltan ${3 - photoCount} fotos.`,
             variant: "destructive"
           });
           return false;
@@ -163,6 +184,7 @@ export const useMedicalFormWizard = () => {
         comments: "",
         images: null,
         consent: false,
+        newsletter: false,
         symptoms: {},
       });
       
