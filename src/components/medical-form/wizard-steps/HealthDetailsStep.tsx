@@ -2,8 +2,8 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
 import { MedicalFormData } from "../FormTypes";
+import MedicalDetailsFields from "../MedicalDetailsFields";
 
 interface HealthDetailsStepProps {
   formData: MedicalFormData;
@@ -57,65 +57,11 @@ const HealthDetailsStep = ({ formData, handleChange, handleSelectChange }: Healt
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <Label htmlFor="weight">Peso (kg)</Label>
-          <Input 
-            id="weight"
-            name="weight"
-            type="number"
-            placeholder="Ej: 70"
-            value={formData.weight}
-            onChange={handleChange}
-            className="mt-1 border-gray-300"
-            required
-          />
-        </div>
-        
-        <div>
-          <Label htmlFor="height">Altura (cm)</Label>
-          <Input 
-            id="height"
-            name="height"
-            type="number"
-            placeholder="Ej: 165"
-            value={formData.height}
-            onChange={handleChange}
-            className="mt-1 border-gray-300"
-            required
-          />
-        </div>
-      </div>
-      
-      <div>
-        <Label htmlFor="doctor">¿Con qué doctor deseas tu consulta?</Label>
-        <Select 
-          name="doctor" 
-          onValueChange={(value) => handleSelectChange("doctor", value)}
-          value={formData.doctor}
-        >
-          <SelectTrigger className="mt-1 border-gray-300">
-            <SelectValue placeholder="Selecciona un especialista" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="dr_zambrano">Dr. Juan C. Zambrano</SelectItem>
-            <SelectItem value="dra_gaona">Dra. Jennifer Gaona</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-      
-      <div>
-        <Label htmlFor="comments">Comentarios sobre tu caso</Label>
-        <Textarea 
-          id="comments"
-          name="comments"
-          placeholder="Describe tu caso, síntomas o dudas que tengas"
-          value={formData.comments}
-          onChange={handleChange}
-          className="mt-1 border-gray-300"
-          rows={4}
-        />
-      </div>
+      <MedicalDetailsFields 
+        formData={formData}
+        handleChange={handleChange}
+        handleSelectChange={handleSelectChange}
+      />
     </div>
   );
 };
