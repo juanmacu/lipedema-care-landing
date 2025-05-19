@@ -7,24 +7,24 @@ import { supabase } from "@/integrations/supabase/client";
 
 type AssetType = 'logo' | 'banner' | 'collage' | 'foto-doctor' | 'foto-doctora';
 
-// Custom hook to fetch branding assets
-const useBrandingAssets = (type: AssetType) => {
-  return useQuery({
-    queryKey: ['branding-assets', type],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from('branding_assets')
-        .select('*')
-        .eq('type', type)
-        .single();
-      
-      if (error) throw error;
-      return data;
-    }
-  });
-};
-
 const IntegradaHero = () => {
+  // Custom hook moved inside the component
+  const useBrandingAssets = (type: AssetType) => {
+    return useQuery({
+      queryKey: ['branding-assets', type],
+      queryFn: async () => {
+        const { data, error } = await supabase
+          .from('branding_assets')
+          .select('*')
+          .eq('type', type)
+          .single();
+        
+        if (error) throw error;
+        return data;
+      }
+    });
+  };
+
   const { data: bannerData, isLoading: bannerLoading } = useBrandingAssets('banner');
   const { data: doctorData, isLoading: doctorLoading } = useBrandingAssets('foto-doctor');
   const { data: doctoraData, isLoading: doctoraLoading } = useBrandingAssets('foto-doctora');
