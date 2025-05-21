@@ -36,6 +36,84 @@ export type Database = {
         }
         Relationships: []
       }
+      form_submissions_lipedema: {
+        Row: {
+          age: number | null
+          case_comments: string | null
+          consent_data_use: boolean | null
+          consent_newsletter: boolean | null
+          country: string | null
+          email: string
+          full_name: string
+          gender: string | null
+          height_cm: number | null
+          id: string
+          phone: string | null
+          photo_urls: Json | null
+          selected_doctor: string | null
+          submitted_at: string | null
+          symptom_cascara_naranja: boolean | null
+          symptom_dolor_articulaciones: boolean | null
+          symptom_dolor_piernas: boolean | null
+          symptom_frio_extremidades: boolean | null
+          symptom_grasa_simetrica: boolean | null
+          symptom_hinchazon: boolean | null
+          symptom_moretones: boolean | null
+          symptom_pesadez: boolean | null
+          weight_kg: number | null
+        }
+        Insert: {
+          age?: number | null
+          case_comments?: string | null
+          consent_data_use?: boolean | null
+          consent_newsletter?: boolean | null
+          country?: string | null
+          email: string
+          full_name: string
+          gender?: string | null
+          height_cm?: number | null
+          id?: string
+          phone?: string | null
+          photo_urls?: Json | null
+          selected_doctor?: string | null
+          submitted_at?: string | null
+          symptom_cascara_naranja?: boolean | null
+          symptom_dolor_articulaciones?: boolean | null
+          symptom_dolor_piernas?: boolean | null
+          symptom_frio_extremidades?: boolean | null
+          symptom_grasa_simetrica?: boolean | null
+          symptom_hinchazon?: boolean | null
+          symptom_moretones?: boolean | null
+          symptom_pesadez?: boolean | null
+          weight_kg?: number | null
+        }
+        Update: {
+          age?: number | null
+          case_comments?: string | null
+          consent_data_use?: boolean | null
+          consent_newsletter?: boolean | null
+          country?: string | null
+          email?: string
+          full_name?: string
+          gender?: string | null
+          height_cm?: number | null
+          id?: string
+          phone?: string | null
+          photo_urls?: Json | null
+          selected_doctor?: string | null
+          submitted_at?: string | null
+          symptom_cascara_naranja?: boolean | null
+          symptom_dolor_articulaciones?: boolean | null
+          symptom_dolor_piernas?: boolean | null
+          symptom_frio_extremidades?: boolean | null
+          symptom_grasa_simetrica?: boolean | null
+          symptom_hinchazon?: boolean | null
+          symptom_moretones?: boolean | null
+          symptom_pesadez?: boolean | null
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -12,8 +12,16 @@ export interface MedicalFormData {
   comments: string;
   images: FileList | null;
   consent: boolean;
-  newsletter?: boolean; // Added newsletter consent
+  newsletter?: boolean;
   symptoms?: {
-    [key: string]: boolean;
+    dolor_piernas?: boolean;
+    pesadez?: boolean;
+    hinchazon?: boolean;
+    moretones?: boolean;
+    grasa_simetrica?: boolean;
+    cascara_naranja?: boolean;
+    frio_extremidades?: boolean;
+    dolor_articulaciones?: boolean;
+    [key: string]: boolean | undefined;
   };
 }

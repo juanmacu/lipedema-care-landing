@@ -1,7 +1,6 @@
 
-import { useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { MedicalFormData } from "../FormTypes";
 
 interface SelfEvaluationStepProps {
@@ -11,47 +10,49 @@ interface SelfEvaluationStepProps {
 
 const SelfEvaluationStep = ({ formData, handleSymptomsChange }: SelfEvaluationStepProps) => {
   const symptoms = [
-    { id: "legPain", label: "Dolor en las piernas al tocarlas" },
-    { id: "heaviness", label: "Sensación de pesadez en las piernas" },
-    { id: "swelling", label: "Hinchazón que no se reduce con el reposo" },
-    { id: "bruising", label: "Moretones que aparecen con facilidad" },
-    { id: "symmetricFat", label: "Grasa simétrica en ambos lados del cuerpo" },
-    { id: "orangePeel", label: "Piel con apariencia de 'cáscara de naranja'" },
-    { id: "coldness", label: "Sensación de frío en las extremidades" },
-    { id: "jointPain", label: "Dolor en las articulaciones" }
+    { id: "dolor_piernas", label: "Dolor en piernas" },
+    { id: "pesadez", label: "Sensación de pesadez en piernas" },
+    { id: "hinchazon", label: "Hinchazón que no mejora con elevación" },
+    { id: "moretones", label: "Moretones o hematomas con facilidad" },
+    { id: "grasa_simetrica", label: "Acumulación de grasa simétrica en piernas/brazos" },
+    { id: "cascara_naranja", label: "Piel con apariencia de 'cáscara de naranja'" },
+    { id: "frio_extremidades", label: "Frío en extremidades" },
+    { id: "dolor_articulaciones", label: "Dolor en articulaciones" },
   ];
-
+  
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
-        <h3 className="text-xl font-medium mb-2">¿Te identificas con estos síntomas?</h3>
-        <p className="text-gray-600">
-          Muchas personas viven con síntomas de lipedema sin saberlo. Este paso te ayudará a
-          reflexionar sobre tu situación.
+        <h3 className="text-xl md:text-2xl font-medium text-zambrano-dark-blue mb-2">
+          ¿Qué síntomas has experimentado?
+        </h3>
+        <p className="text-zambrano-gray">
+          Selecciona todos los síntomas que has notado durante los últimos meses. Esta información 
+          ayudará a nuestros médicos a evaluar tu caso.
         </p>
       </div>
       
-      <div className="space-y-4">
-        {symptoms.map((symptom) => (
-          <div key={symptom.id} className="flex items-center justify-between border-b pb-3">
-            <Label htmlFor={symptom.id} className="flex-grow cursor-pointer">
-              {symptom.label}
-            </Label>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-500 font-medium">No</span>
-              <Switch 
+      <div className="bg-white p-6 rounded-lg border border-gray-100 shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {symptoms.map((symptom) => (
+            <div key={symptom.id} className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-md">
+              <Checkbox 
                 id={symptom.id}
                 checked={formData.symptoms?.[symptom.id] || false}
-                onCheckedChange={(checked) => handleSymptomsChange(symptom.id, checked)}
+                onCheckedChange={(checked) => 
+                  handleSymptomsChange(symptom.id, checked === true)
+                }
+                className="mt-1 data-[state=checked]:bg-zambrano-light-blue data-[state=checked]:border-zambrano-dark-blue"
               />
-              <span className="text-sm text-gray-500 font-medium">Sí</span>
+              <Label 
+                htmlFor={symptom.id}
+                className="cursor-pointer font-medium text-zambrano-dark-blue"
+              >
+                {symptom.label}
+              </Label>
             </div>
-          </div>
-        ))}
-      </div>
-      
-      <div className="text-sm text-center text-gray-500 italic mt-6">
-        Esta autoevaluación no sustituye un diagnóstico profesional.
+          ))}
+        </div>
       </div>
     </div>
   );
