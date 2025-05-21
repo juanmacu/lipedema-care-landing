@@ -14,11 +14,6 @@ const TeAcompanamos = () => {
       src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9360-2.jpg",
       alt: "Dr. Zambrano en quirófano",
       title: "Tratamiento especializado"
-    },
-    {
-      src: "/lovable-uploads/9db16f71-f725-42ed-94c2-ceb0f8cbfb4d.png",
-      alt: "Dr. Zambrano en conferencia",
-      title: "Educación continua"
     }
   ];
 
@@ -34,7 +29,7 @@ const TeAcompanamos = () => {
         
         <div className="relative mb-16 reveal-section">
           {/* Image collage */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
             {images.map((image, index) => (
               <Fragment key={index}>
                 <div className="flex flex-col items-center staggered-item">
@@ -52,7 +47,7 @@ const TeAcompanamos = () => {
                 {/* Connecting lines - only between images */}
                 {index < images.length - 1 && (
                   <div className="hidden md:block absolute" style={{
-                    left: `${(index + 1) * 33 - 8}%`,
+                    left: `${(index + 1) * 50 - 8}%`,
                     top: '30%',
                     width: '8%',
                     height: '2px',

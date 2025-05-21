@@ -126,21 +126,6 @@ const IntegradaMeetDoctors = () => {
           </Card>
         </div>
       </div>
-      
-      <div className="container mx-auto px-4 mt-16">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-light text-zambrano-dark-blue mb-2">Educación continua</h3>
-        </div>
-        <div className="flex justify-center">
-          <div className="max-w-3xl w-full rounded-xl overflow-hidden shadow-lg">
-            <img 
-              src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/WhatsApp%20Image%202025-05-19%20at%2015.43.50%20(1).jpeg" 
-              alt="Educación continua - Dra. Jennifer Gaona y Dr. Juan Carlos Zambrano" 
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
