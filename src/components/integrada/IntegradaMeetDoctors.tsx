@@ -35,17 +35,10 @@ const IntegradaMeetDoctors = () => {
               />
             </div>
             <CardContent className="p-6">
-              <div className="flex items-center flex-wrap gap-2 mb-2">
+              <div className="flex items-center mb-2">
                 <h3 className="text-2xl font-medium text-zambrano-dark-blue">Dr. Juan Carlos Zambrano</h3>
-                <Badge className="bg-zambrano-light-blue text-zambrano-dark-blue">Cirugía Lipedema</Badge>
               </div>
-              <p className="text-zambrano-light-blue font-medium mb-4">Cirujano Plástico</p>
-              
-              <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" className="bg-gray-50">Experto en Lipedema</Badge>
-                <Badge variant="outline" className="bg-gray-50">Estética Facial</Badge>
-                <Badge variant="outline" className="bg-gray-50">Empatía Clínica</Badge>
-              </div>
+              <p className="text-zambrano-light-blue font-medium mb-4">Cirujano Plástico y Reconstructivo</p>
               
               <div className={`relative ${!expandedZambrano ? 'max-h-28 overflow-hidden' : ''}`}>
                 <p className="text-gray-700 mb-4">
@@ -96,17 +89,10 @@ const IntegradaMeetDoctors = () => {
               />
             </div>
             <CardContent className="p-6">
-              <div className="flex items-center flex-wrap gap-2 mb-2">
+              <div className="flex items-center mb-2">
                 <h3 className="text-2xl font-medium text-zambrano-dark-blue">Dra. Jennifer Gaona</h3>
-                <Badge className="bg-zambrano-light-blue text-zambrano-dark-blue">Cirugía Corporal</Badge>
               </div>
-              <p className="text-zambrano-light-blue font-medium mb-4">Cirujana Plástica</p>
-              
-              <div className="flex flex-wrap gap-2 mb-4">
-                <Badge variant="outline" className="bg-gray-50">Experta en Lipedema</Badge>
-                <Badge variant="outline" className="bg-gray-50">Cirugía Corporal</Badge>
-                <Badge variant="outline" className="bg-gray-50">Acompañamiento Terapéutico</Badge>
-              </div>
+              <p className="text-zambrano-light-blue font-medium mb-4">Cirujana Plástica y Reconstructiva</p>
               
               <div className={`relative ${!expandedGaona ? 'max-h-28 overflow-hidden' : ''}`}>
                 <p className="text-gray-700 mb-4">
@@ -141,6 +127,39 @@ const IntegradaMeetDoctors = () => {
               </button>
             </CardContent>
           </Card>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-4 mt-16">
+        <div className="text-center mb-8">
+          <h3 className="text-2xl font-light text-zambrano-dark-blue mb-2">Educación continua</h3>
+        </div>
+        <div className="flex justify-center">
+          <div className="max-w-3xl w-full rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/WhatsApp%20Image%202025-05-19%20at%2015.43.50%20(1).jpeg" 
+              alt="Educación continua - Dra. Jennifer Gaona y Dr. Juan Carlos Zambrano" 
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+        
+        <div className="mt-12 bg-zambrano-dark-blue text-white p-8 rounded-lg max-w-md mx-auto">
+          <h3 className="text-xl font-medium mb-4">Dra. Jennifer Gaona</h3>
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <span className="text-zambrano-light-blue">@</span>
+              <span>@jennifergaona</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-zambrano-light-blue">✉</span>
+              <span>jennifergaonaplastic@gmail.com</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-zambrano-light-blue">☎</span>
+              <span>+57 3232348414</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -7,6 +7,7 @@ import TeAcompanamos from "@/components/emotional/TeAcompanamos";
 import IntegradaMeetDoctors from "@/components/integrada/IntegradaMeetDoctors";
 import MedicalFormWizard from "@/components/MedicalFormWizard";
 import IntegradaFooter from "@/components/integrada/IntegradaFooter";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -89,6 +90,9 @@ const LandingIntegrada = () => {
       </main>
       <IntegradaFooter />
       
+      {/* WhatsApp floating button */}
+      <WhatsAppButton />
+      
       {/* Back to top button */}
       <div className={`fixed bottom-6 right-6 transition-opacity duration-300 z-40 ${showBackToTop ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <Button 
@@ -107,7 +111,7 @@ const LandingIntegrada = () => {
           onClick={() => scrollToSection('valoracion')}
           className="w-full bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white py-3"
         >
-          Agenda tu consulta
+          Agenda tu valoración
         </Button>
       </div>
     </div>

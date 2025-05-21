@@ -34,7 +34,7 @@ const IntegradaHeader = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo con ajustes para evitar sobreposición */}
+          {/* Logo */}
           <div className="flex items-center transition-transform duration-300 hover:scale-[1.02]">
             <img 
               src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
@@ -85,7 +85,7 @@ const IntegradaHeader = () => {
             className="hidden md:flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
           >
             <CalendarDays size={18} />
-            <span>Solicita tu consulta</span>
+            <span>Agenda tu valoración</span>
           </Button>
           
           <button 
@@ -130,7 +130,7 @@ const IntegradaHeader = () => {
                 className="flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 w-full justify-center"
               >
                 <CalendarDays size={18} />
-                <span>Solicita tu consulta</span>
+                <span>Agenda tu valoración</span>
               </Button>
             </nav>
           </div>
