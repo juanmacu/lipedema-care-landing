@@ -30,11 +30,11 @@ const IntegradaFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and brief description */}
           <div className="col-span-1">
-            <div className="mb-6">
+            <div className="mb-8">
               <img 
                 src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/02.png" 
                 alt="Gaona Zambrano Cirujanos Plásticos" 
-                className="h-12"
+                className="h-20 md:h-24 w-auto"
               />
             </div>
             <p className="mb-4 text-gray-300">
