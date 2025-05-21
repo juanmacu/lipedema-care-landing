@@ -16,8 +16,8 @@ const TeAcompanamos = () => {
       title: "Tratamiento especializado"
     },
     {
-      src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/educacion%20continua.png",
-      alt: "Dr. Zambrano en entrevista",
+      src: "/lovable-uploads/9db16f71-f725-42ed-94c2-ceb0f8cbfb4d.png",
+      alt: "Dr. Zambrano en conferencia",
       title: "Educación continua"
     }
   ];
