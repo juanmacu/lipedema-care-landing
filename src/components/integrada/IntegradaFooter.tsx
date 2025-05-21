@@ -85,13 +85,13 @@ const IntegradaFooter = () => {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="https://www.instagram.com/drajenniferga" 
+                  href="https://www.instagram.com/jennifergaona" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Instagram size={18} />
-                  <span>@drajenniferga</span>
+                  <span>@jennifergaona</span>
                 </a>
               </li>
               <li>
@@ -105,11 +105,11 @@ const IntegradaFooter = () => {
               </li>
               <li>
                 <a 
-                  href="tel:+573045826329" 
+                  href="tel:+573232348414" 
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Phone size={18} />
-                  <span>+57 304 582 6329</span>
+                  <span>+57 3232348414</span>
                 </a>
               </li>
             </ul>

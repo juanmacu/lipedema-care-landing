@@ -1,11 +1,8 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-
-type AssetType = 'logo' | 'banner' | 'collage' | 'foto-doctor' | 'foto-doctora';
 
 const IntegradaMeetDoctors = () => {
   const [expandedZambrano, setExpandedZambrano] = useState(false);
@@ -141,24 +138,6 @@ const IntegradaMeetDoctors = () => {
               alt="Educación continua - Dra. Jennifer Gaona y Dr. Juan Carlos Zambrano" 
               className="w-full h-auto"
             />
-          </div>
-        </div>
-        
-        <div className="mt-12 bg-zambrano-dark-blue text-white p-8 rounded-lg max-w-md mx-auto">
-          <h3 className="text-xl font-medium mb-4">Dra. Jennifer Gaona</h3>
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <span className="text-zambrano-light-blue">@</span>
-              <span>@jennifergaona</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-zambrano-light-blue">✉</span>
-              <span>jennifergaonaplastic@gmail.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-zambrano-light-blue">☎</span>
-              <span>+57 3232348414</span>
-            </div>
           </div>
         </div>
       </div>

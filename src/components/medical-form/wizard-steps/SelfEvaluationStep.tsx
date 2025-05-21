@@ -38,13 +38,13 @@ const SelfEvaluationStep = ({ formData, handleSymptomsChange }: SelfEvaluationSt
               {symptom.label}
             </Label>
             <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-500">No</span>
+              <span className="text-sm text-gray-500 font-medium">No</span>
               <Switch 
                 id={symptom.id}
                 checked={formData.symptoms?.[symptom.id] || false}
                 onCheckedChange={(checked) => handleSymptomsChange(symptom.id, checked)}
               />
-              <span className="text-sm text-gray-500">Sí</span>
+              <span className="text-sm text-gray-500 font-medium">Sí</span>
             </div>
           </div>
         ))}
