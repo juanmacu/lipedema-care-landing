@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import { WhatsApp } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const WhatsAppButton = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -40,7 +40,7 @@ const WhatsAppButton = () => {
         className="fixed bottom-24 right-6 z-40 bg-green-500 text-white rounded-full p-3 shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110"
         aria-label="Contáctanos por WhatsApp"
       >
-        <WhatsApp size={28} />
+        <MessageSquare size={28} />
       </a>
       
       {/* WhatsApp popup */}
@@ -48,7 +48,7 @@ const WhatsAppButton = () => {
         <div className="fixed bottom-40 right-6 z-40 bg-white rounded-lg shadow-xl max-w-xs animate-fade-in border border-gray-100">
           <div className="flex justify-between items-center p-3 bg-green-500 text-white rounded-t-lg">
             <div className="flex items-center gap-2">
-              <WhatsApp size={20} />
+              <MessageSquare size={20} />
               <h3 className="font-medium">¿Tienes dudas?</h3>
             </div>
             <button 
@@ -72,7 +72,7 @@ const WhatsAppButton = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <WhatsApp size={18} />
+                <MessageSquare size={18} />
                 <span>Contactar ahora</span>
               </a>
             </Button>
