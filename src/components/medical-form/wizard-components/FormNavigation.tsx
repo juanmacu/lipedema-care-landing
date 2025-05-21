@@ -37,7 +37,7 @@ const FormNavigation = ({
   };
 
   return (
-    <div className="flex justify-between mt-8">
+    <div className="flex justify-center mt-8 gap-4">
       {currentStep > 1 && (
         <Button 
           type="button" 
@@ -53,7 +53,7 @@ const FormNavigation = ({
         <Button 
           type="button" 
           onClick={onNext}
-          className={`transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6 ${
+          className={`transition-all duration-300 hover:scale-[1.02] hover:shadow-md px-6 ${
             currentStep === 2 
               ? "bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90" 
               : "bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white"
@@ -65,7 +65,7 @@ const FormNavigation = ({
         <Button 
           type="submit"
           disabled={isSubmitting}
-          className="bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-md ml-auto px-6"
+          className="bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transition-all duration-300 hover:scale-[1.02] hover:shadow-md px-6"
         >
           {isSubmitting ? "Enviando..." : "Enviar mi valoración"}
         </Button>

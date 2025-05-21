@@ -69,20 +69,12 @@ const IntegradaHeader = () => {
                   Quiénes te acompañan
                 </button>
               </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('valoracion')}
-                  className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-                >
-                  Agenda tu Valoración
-                </button>
-              </li>
             </ul>
           </nav>
           
           <Button 
             onClick={() => scrollToSection('valoracion')}
-            className="hidden md:flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
+            className="flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
           >
             <CalendarDays size={18} />
             <span>Agenda tu valoración</span>
@@ -103,27 +95,21 @@ const IntegradaHeader = () => {
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('inicio')}
-                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md text-center"
               >
                 Inicio
               </button>
               <button 
                 onClick={() => scrollToSection('lipedema')}
-                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md text-center"
               >
                 Qué es el Lipedema
               </button>
               <button 
                 onClick={() => scrollToSection('doctors')}
-                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md text-center"
               >
                 Quiénes te acompañan
-              </button>
-              <button 
-                onClick={() => scrollToSection('valoracion')}
-                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md"
-              >
-                Agenda tu Valoración
               </button>
               <Button 
                 onClick={() => scrollToSection('valoracion')}

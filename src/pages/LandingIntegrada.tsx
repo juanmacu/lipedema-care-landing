@@ -109,7 +109,7 @@ const LandingIntegrada = () => {
       <div className="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-white shadow-lg border-t border-gray-100 z-30">
         <Button 
           onClick={() => scrollToSection('valoracion')}
-          className="w-full bg-zambrano-dark-blue hover:bg-zambrano-dark-blue/90 text-white py-3"
+          className="w-full bg-zambrano-light-blue hover:bg-zambrano-light-blue/90 text-zambrano-dark-blue py-3"
         >
           Agenda tu valoración
         </Button>
