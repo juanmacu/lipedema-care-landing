@@ -1,4 +1,3 @@
-
 import { Mail, Phone, Instagram } from 'lucide-react';
 
 const Footer = () => {
@@ -10,7 +9,7 @@ const Footer = () => {
             <div>
               <div className="mb-4">
                 <img 
-                  src="/lovable-uploads/68834900-3e16-4c08-b4e5-2a1502c9623a.png" 
+                  src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/02.png" 
                   alt="Gaona Zambrano Cirujanos Plásticos" 
                   className="h-12"
                 />
