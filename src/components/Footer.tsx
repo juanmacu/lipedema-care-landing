@@ -8,9 +8,15 @@ const Footer = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl mb-4 font-medium">Dr. Juan C. Zambrano</h3>
+              <div className="mb-4">
+                <img 
+                  src="/lovable-uploads/68834900-3e16-4c08-b4e5-2a1502c9623a.png" 
+                  alt="Gaona Zambrano Cirujanos Plásticos" 
+                  className="h-12"
+                />
+              </div>
               <p className="text-gray-300 mb-6">
-                Especialista en diagnóstico y tratamiento de Lipedema
+                Especialistas en diagnóstico y tratamiento de Lipedema
               </p>
               <div className="space-y-2">
                 <a href="tel:3108040097" className="flex items-center text-gray-300 hover:text-white">
