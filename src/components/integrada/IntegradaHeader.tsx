@@ -34,17 +34,18 @@ const IntegradaHeader = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - aumentado 25% */}
           <div className="flex items-center transition-transform duration-300 hover:scale-[1.02]">
             <img 
               src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
               alt="Logo Gaona Zambrano" 
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </div>
           
+          {/* Desktop Navigation - reorganizada y alineada a la derecha */}
           <nav className="hidden md:block">
-            <ul className="flex space-x-6 items-center">
+            <ul className="flex space-x-8 items-center">
               <li>
                 <button 
                   onClick={() => scrollToSection('inicio')}
@@ -55,10 +56,10 @@ const IntegradaHeader = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('lipedema')}
+                  onClick={() => scrollToSection('valoracion')}
                   className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
-                  Qué es el Lipedema
+                  Valoración
                 </button>
               </li>
               <li>
@@ -66,15 +67,25 @@ const IntegradaHeader = () => {
                   onClick={() => scrollToSection('doctors')}
                   className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
                 >
-                  Quiénes te acompañan
+                  Nosotros
                 </button>
+              </li>
+              <li>
+                <a 
+                  href="https://wa.link/r10i52"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-zambrano-dark-blue after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                >
+                  Contacto
+                </a>
               </li>
             </ul>
           </nav>
           
           <Button 
             onClick={() => scrollToSection('valoracion')}
-            className="flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
+            className="hidden md:flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 transform transition-all duration-300 hover:scale-105 hover:shadow-md"
           >
             <CalendarDays size={18} />
             <span>Agenda tu valoración</span>
@@ -100,17 +111,25 @@ const IntegradaHeader = () => {
                 Inicio
               </button>
               <button 
-                onClick={() => scrollToSection('lipedema')}
+                onClick={() => scrollToSection('valoracion')}
                 className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md text-center"
               >
-                Qué es el Lipedema
+                Valoración
               </button>
               <button 
                 onClick={() => scrollToSection('doctors')}
                 className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md text-center"
               >
-                Quiénes te acompañan
+                Nosotros
               </button>
+              <a 
+                href="https://wa.link/r10i52"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zambrano-gray hover:text-zambrano-dark-blue transition-colors py-2 px-3 hover:bg-gray-50 rounded-md text-center block"
+              >
+                Contacto
+              </a>
               <Button 
                 onClick={() => scrollToSection('valoracion')}
                 className="flex items-center gap-2 bg-zambrano-light-blue text-zambrano-dark-blue hover:bg-zambrano-light-blue/90 w-full justify-center"

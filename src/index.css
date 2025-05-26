@@ -51,6 +51,36 @@
     @apply font-quicksand font-light;
   }
 
+  /* Estilos mejorados para bullets más discretos */
+  ul {
+    @apply list-none;
+  }
+  
+  ul li {
+    @apply relative pl-6;
+  }
+  
+  ul li::before {
+    content: "•";
+    @apply absolute left-0 top-0 text-zambrano-light-blue text-sm font-normal;
+    line-height: inherit;
+  }
+  
+  /* Para listas ordenadas también */
+  ol {
+    @apply list-none counter-reset-item;
+  }
+  
+  ol li {
+    @apply relative pl-6 counter-increment-item;
+  }
+  
+  ol li::before {
+    content: counter(item) ".";
+    @apply absolute left-0 top-0 text-zambrano-light-blue text-sm font-normal;
+    line-height: inherit;
+  }
+
   .container-section {
     @apply container mx-auto px-4 py-12 md:py-16 lg:py-20;
   }
