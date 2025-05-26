@@ -40,7 +40,7 @@ const IntegradaHero = () => {
       {/* Elementos decorativos inspirados en la portada del libro */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Siluetas femeninas estilizadas */}
-        <div className="absolute top-10 left-8 opacity-10">
+        <div className="absolute top-10 left-8 opacity-6">
           <svg width="120" height="200" viewBox="0 0 120 200" className="text-zambrano-dark-blue">
             <path d="M60 20 C50 25, 45 35, 50 50 C52 70, 48 90, 45 110 C42 130, 40 150, 45 170 C50 185, 55 190, 60 195 C65 190, 70 185, 75 170 C80 150, 78 130, 75 110 C72 90, 68 70, 70 50 C75 35, 70 25, 60 20 Z" fill="currentColor"/>
             <circle cx="60" cy="15" r="8" fill="currentColor"/>
