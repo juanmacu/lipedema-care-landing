@@ -26,9 +26,6 @@ const IntegradaHero = () => {
   };
 
   const { data: bannerData, isLoading: bannerLoading } = useBrandingAssets('banner');
-  const { data: doctorData, isLoading: doctorLoading } = useBrandingAssets('foto-doctor');
-  const { data: doctoraData, isLoading: doctoraLoading } = useBrandingAssets('foto-doctora');
-  const { data: collageData, isLoading: collageLoading } = useBrandingAssets('collage');
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -97,34 +94,32 @@ const IntegradaHero = () => {
               <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-white/80 rounded-bl-lg z-10"></div>
               <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-white/80 rounded-br-lg z-10"></div>
               
-              {/* Hero image - collage of both doctors */}
+              {/* Before and After Lipedema images */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
-                <div className="aspect-square overflow-hidden bg-white">
-                  {doctorLoading ? (
-                    <div className="w-full h-full bg-gray-200 animate-pulse"></div>
-                  ) : (
-                    <img 
-                      src={doctorData?.url || "/placeholder.svg"} 
-                      alt={doctorData?.alt_text || "Dr. Juan C. Zambrano"} 
-                      className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
-                    />
-                  )}
+                <div className="aspect-square overflow-hidden bg-white relative">
+                  <img 
+                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/lipedema_64cbb4cc_1200x1200.jpg" 
+                    alt="Lipedema antes del tratamiento" 
+                    className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute top-2 left-2 bg-zambrano-dark-blue/80 text-white px-2 py-1 rounded text-xs font-medium">
+                    Antes
+                  </div>
                 </div>
-                <div className="aspect-square overflow-hidden bg-white">
-                  {doctoraLoading ? (
-                    <div className="w-full h-full bg-gray-200 animate-pulse"></div>
-                  ) : (
-                    <img 
-                      src={doctoraData?.url || "/placeholder.svg"} 
-                      alt={doctoraData?.alt_text || "Dra. Jennifer Gaona"} 
-                      className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
-                    />
-                  )}
+                <div className="aspect-square overflow-hidden bg-white relative">
+                  <img 
+                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/lipedema_retouch_suave_intenso.jpg" 
+                    alt="Lipedema después del tratamiento" 
+                    className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
+                  />
+                  <div className="absolute top-2 left-2 bg-zambrano-light-blue/90 text-zambrano-dark-blue px-2 py-1 rounded text-xs font-bold">
+                    Después
+                  </div>
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4 bg-gradient-to-t from-zambrano-dark-blue/90 to-transparent">
-                <p className="font-bold">Dra. Jennifer Gaona & Dr. Juan C. Zambrano</p>
-                <p className="text-sm">Cirujanos plásticos especializados en Lipedema</p>
+                <p className="font-bold">Resultados reales de nuestros tratamientos</p>
+                <p className="text-sm">Transformación integral del lipedema</p>
               </div>
             </div>
           </div>
