@@ -35,7 +35,7 @@ const IntegradaHero = () => {
   return (
     <section 
       id="inicio"
-      className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-br from-white via-white to-zambrano-light-blue/20 flex items-center pt-20"
+      className="relative min-h-[90vh] md:min-h-[85vh] bg-gradient-to-br from-white via-white to-zambrano-light-blue/20 flex items-center pt-16 md:pt-20"
     >
       {/* Elementos decorativos minimalistas */}
       <div className="absolute inset-0 overflow-hidden">
@@ -59,20 +59,20 @@ const IntegradaHero = () => {
         <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-zambrano-dark-blue/5 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="container mx-auto px-4 py-16 md:py-24 lg:py-28 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      <div className="container mx-auto px-4 py-8 md:py-16 lg:py-28 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <div className="animate-fade-in opacity-0" style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight text-zambrano-dark-blue">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-light mb-4 md:mb-6 leading-tight text-zambrano-dark-blue">
                 Lipedema: una enfermedad silenciosa, pero no estás sola
               </h1>
-              <p className="text-xl md:text-2xl mb-8 font-quicksand animate-fade-in opacity-0 text-zambrano-gray tracking-wide" style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
+              <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 font-quicksand animate-fade-in opacity-0 text-zambrano-gray tracking-wide" style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
                 Sabemos lo difícil que es obtener un diagnóstico claro de lipedema. Por eso, nuestro equipo liderado por la Dra. Jennifer Gaona y el Dr. Juan C. Zambrano te acompaña con un enfoque humano y especializado.
               </p>
               <Button 
                 onClick={() => scrollToSection('valoracion')}
                 size="lg"
-                className="bg-zambrano-light-blue hover:bg-zambrano-light-blue/90 text-zambrano-dark-blue px-8 py-6 text-lg rounded-md flex items-center gap-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg group animate-fade-in opacity-0"
+                className="bg-zambrano-light-blue hover:bg-zambrano-light-blue/90 text-zambrano-dark-blue px-6 md:px-8 py-4 md:py-6 text-base md:text-lg rounded-md flex items-center gap-2 transform transition-all duration-300 hover:scale-105 hover:shadow-lg group animate-fade-in opacity-0 w-full md:w-auto justify-center"
                 style={{ animationDelay: "600ms", animationFillMode: "forwards" }}
               >
                 <Heart className="mr-1" />
@@ -80,23 +80,23 @@ const IntegradaHero = () => {
                 <ArrowDown className="transition-transform duration-300 group-hover:translate-y-1" size={20} />
               </Button>
               
-              <p className="mt-6 text-zambrano-gray animate-fade-in opacity-0" style={{ animationDelay: "800ms", animationFillMode: "forwards" }}>
+              <p className="mt-4 md:mt-6 text-zambrano-gray animate-fade-in opacity-0 text-center md:text-left" style={{ animationDelay: "800ms", animationFillMode: "forwards" }}>
                 Médicos especialistas en el diagnóstico y tratamiento del Lipedema
               </p>
             </div>
           </div>
           
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg animate-fade-in opacity-0" style={{ animationDelay: "300ms", animationFillMode: "forwards" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-lg animate-fade-in opacity-0 w-full max-w-sm md:max-w-none" style={{ animationDelay: "300ms", animationFillMode: "forwards" }}>
               {/* Elementos decorativos en las esquinas */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-white/80 rounded-tl-lg z-10"></div>
-              <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-white/80 rounded-tr-lg z-10"></div>
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-white/80 rounded-bl-lg z-10"></div>
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-white/80 rounded-br-lg z-10"></div>
+              <div className="absolute top-0 left-0 w-6 md:w-8 h-6 md:h-8 border-t border-l border-white/80 rounded-tl-lg z-10"></div>
+              <div className="absolute top-0 right-0 w-6 md:w-8 h-6 md:h-8 border-t border-r border-white/80 rounded-tr-lg z-10"></div>
+              <div className="absolute bottom-0 left-0 w-6 md:w-8 h-6 md:h-8 border-b border-l border-white/80 rounded-bl-lg z-10"></div>
+              <div className="absolute bottom-0 right-0 w-6 md:w-8 h-6 md:h-8 border-b border-r border-white/80 rounded-br-lg z-10"></div>
               
               {/* Before and After Lipedema images */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-0.5">
-                <div className="aspect-square overflow-hidden bg-white relative">
+              <div className="grid grid-cols-2 gap-0.5">
+                <div className="aspect-[4/5] md:aspect-square overflow-hidden bg-white relative">
                   <img 
                     src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/lipedema_64cbb4cc_1200x1200.jpg" 
                     alt="Lipedema antes del tratamiento" 
@@ -106,7 +106,7 @@ const IntegradaHero = () => {
                     Antes
                   </div>
                 </div>
-                <div className="aspect-square overflow-hidden bg-white relative">
+                <div className="aspect-[4/5] md:aspect-square overflow-hidden bg-white relative">
                   <img 
                     src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/lipedema_retouch_suave_intenso.jpg" 
                     alt="Lipedema después del tratamiento" 
@@ -117,22 +117,22 @@ const IntegradaHero = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 text-center text-white p-4 bg-gradient-to-t from-zambrano-dark-blue/90 to-transparent">
-                <p className="font-bold">Resultados reales de nuestros tratamientos</p>
-                <p className="text-sm">Transformación integral del lipedema</p>
+              <div className="absolute bottom-0 left-0 right-0 text-center text-white p-3 md:p-4 bg-gradient-to-t from-zambrano-dark-blue/90 to-transparent">
+                <p className="font-bold text-sm md:text-base">Resultados reales de nuestros tratamientos</p>
+                <p className="text-xs md:text-sm">Transformación integral del lipedema</p>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button 
           onClick={() => scrollToSection('lipedema')} 
           className="text-zambrano-dark-blue hover:text-zambrano-light-blue transition-colors p-2"
           aria-label="Scroll to lipedema section"
         >
-          <ArrowDown size={30} />
+          <ArrowDown size={24} className="md:w-8 md:h-8" />
         </button>
       </div>
     </section>
