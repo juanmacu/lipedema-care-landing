@@ -47,7 +47,7 @@ const IntegradaHero = () => {
           </svg>
         </div>
         
-        <div className="absolute bottom-20 right-12 opacity-8 transform rotate-12">
+        <div className="absolute bottom-20 right-12 opacity-4 transform rotate-12">
           <svg width="100" height="180" viewBox="0 0 100 180" className="text-zambrano-dark-blue">
             <path d="M50 15 C42 20, 38 30, 42 45 C44 65, 40 85, 37 105 C34 125, 32 145, 37 165 C42 175, 47 180, 50 180 C53 180, 58 175, 63 165 C68 145, 66 125, 63 105 C60 85, 56 65, 58 45 C62 30, 58 20, 50 15 Z" fill="currentColor"/>
             <circle cx="50" cy="10" r="6" fill="currentColor"/>
