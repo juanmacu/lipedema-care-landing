@@ -22,8 +22,8 @@ const WhatsAppButton = () => {
   
   return (
     <>
-      {/* Fixed WhatsApp button - más discreto */}
-      <div className="fixed bottom-6 right-6 z-40 group">
+      {/* Fixed WhatsApp button - posicionado a la izquierda del botón de subir */}
+      <div className="fixed bottom-6 right-20 z-40 group">
         <a 
           href={whatsappLink}
           target="_blank"

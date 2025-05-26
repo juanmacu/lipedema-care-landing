@@ -90,10 +90,10 @@ const LandingIntegrada = () => {
       </main>
       <IntegradaFooter />
       
-      {/* WhatsApp floating button */}
+      {/* WhatsApp floating button - ya posicionado correctamente */}
       <WhatsAppButton />
       
-      {/* Back to top button */}
+      {/* Back to top button - mantenido en la esquina derecha */}
       <div className={`fixed bottom-6 right-6 transition-opacity duration-300 z-40 ${showBackToTop ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <Button 
           onClick={scrollToTop} 
