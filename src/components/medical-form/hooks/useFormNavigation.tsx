@@ -1,10 +1,12 @@
 
-import { useState } from "react";
 import { useFormValidation } from "./useFormValidation";
 import { MedicalFormData } from "../FormTypes";
 
-export const useFormNavigation = (formData: MedicalFormData) => {
-  const [currentStep, setCurrentStep] = useState(1);
+export const useFormNavigation = (
+  formData: MedicalFormData,
+  currentStep: number,
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>
+) => {
   const { validateStep } = useFormValidation();
   
   const totalSteps = 5;
@@ -32,7 +34,6 @@ export const useFormNavigation = (formData: MedicalFormData) => {
   };
 
   return {
-    currentStep,
     totalSteps,
     nextStep,
     prevStep

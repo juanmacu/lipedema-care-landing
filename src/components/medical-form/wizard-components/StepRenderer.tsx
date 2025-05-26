@@ -4,6 +4,7 @@ import SelfEvaluationStep from "../wizard-steps/SelfEvaluationStep";
 import HealthDetailsStep from "../wizard-steps/HealthDetailsStep";
 import PhotoUploadStep from "../wizard-steps/PhotoUploadStep";
 import ConfirmationStep from "../wizard-steps/ConfirmationStep";
+import SuccessStep from "../wizard-steps/SuccessStep";
 import { MedicalFormData } from "../FormTypes";
 
 interface StepRendererProps {
@@ -14,6 +15,8 @@ interface StepRendererProps {
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSymptomsChange: (symptom: string, value: boolean) => void;
   isSubmitting: boolean;
+  isSubmitted: boolean;
+  onReset: () => void;
 }
 
 const StepRenderer = ({
@@ -23,8 +26,15 @@ const StepRenderer = ({
   handleSelectChange,
   handleFileChange,
   handleSymptomsChange,
-  isSubmitting
+  isSubmitting,
+  isSubmitted,
+  onReset
 }: StepRendererProps) => {
+  // Si el formulario fue enviado exitosamente, mostrar pantalla de éxito
+  if (isSubmitted) {
+    return <SuccessStep onReset={onReset} />;
+  }
+
   switch(currentStep) {
     case 1:
       return (

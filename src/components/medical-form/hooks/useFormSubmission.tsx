@@ -12,6 +12,7 @@ export const useFormSubmission = (
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>
 ) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
   const { validateStep } = useFormValidation();
 
@@ -127,30 +128,17 @@ export const useFormSubmission = (
       const success = await saveFormToDatabase();
       
       if (success) {
+        // Marcar como enviado exitosamente
+        setIsSubmitted(true);
+        
+        // Mostrar toast centrado con mejor UX
         toast({
-          title: "Valoración enviada correctamente",
+          title: "¡Valoración enviada correctamente!",
           description: "Recibimos tu información. En breve te contactaremos por correo o WhatsApp.",
+          duration: 5000,
         });
         
-        // Reset form
-        setFormData({
-          fullName: "",
-          email: "",
-          phone: "",
-          age: "",
-          gender: "",
-          country: "",
-          weight: "",
-          height: "",
-          doctor: "",
-          comments: "",
-          images: null,
-          consent: false,
-          newsletter: false,
-          symptoms: {},
-        });
-        
-        setCurrentStep(1);
+        // No resetear el formulario inmediatamente, mantener la pantalla de éxito
       } else {
         toast({
           title: "Error al enviar el formulario",
@@ -170,8 +158,32 @@ export const useFormSubmission = (
     }
   };
 
+  const resetForm = () => {
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      age: "",
+      gender: "",
+      country: "",
+      weight: "",
+      height: "",
+      doctor: "",
+      comments: "",
+      images: null,
+      consent: false,
+      newsletter: false,
+      symptoms: {},
+    });
+    
+    setCurrentStep(1);
+    setIsSubmitted(false);
+  };
+
   return {
     isSubmitting,
-    handleSubmit
+    isSubmitted,
+    handleSubmit,
+    resetForm
   };
 };

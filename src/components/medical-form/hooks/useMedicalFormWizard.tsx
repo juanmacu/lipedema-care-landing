@@ -23,6 +23,8 @@ export const useMedicalFormWizard = () => {
     symptoms: {},
   });
 
+  const [currentStep, setCurrentStep] = useState(1);
+
   const {
     handleChange,
     handleSelectChange,
@@ -31,22 +33,24 @@ export const useMedicalFormWizard = () => {
   } = useFormHandlers(formData, setFormData);
 
   const {
-    currentStep,
     totalSteps,
     nextStep,
     prevStep
-  } = useFormNavigation(formData);
+  } = useFormNavigation(formData, currentStep, setCurrentStep);
 
   const {
     isSubmitting,
-    handleSubmit
-  } = useFormSubmission(formData, currentStep, setFormData, (step) => currentStep !== step && prevStep());
+    isSubmitted,
+    handleSubmit,
+    resetForm
+  } = useFormSubmission(formData, currentStep, setFormData, setCurrentStep);
 
   return {
     formData,
     currentStep,
     totalSteps,
     isSubmitting,
+    isSubmitted,
     handleChange,
     handleSelectChange,
     handleFileChange,
@@ -54,5 +58,6 @@ export const useMedicalFormWizard = () => {
     nextStep,
     prevStep,
     handleSubmit,
+    resetForm,
   };
 };

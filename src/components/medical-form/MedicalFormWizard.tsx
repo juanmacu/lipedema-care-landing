@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import StepIndicator from "./wizard-steps/StepIndicator";
 import FormNavigation from "./wizard-components/FormNavigation";
 import StepRenderer from "./wizard-components/StepRenderer";
@@ -14,6 +13,7 @@ const MedicalFormWizard = () => {
     currentStep,
     totalSteps,
     isSubmitting,
+    isSubmitted,
     handleChange,
     handleSelectChange,
     handleFileChange,
@@ -21,6 +21,7 @@ const MedicalFormWizard = () => {
     nextStep,
     prevStep,
     handleSubmit,
+    resetForm,
   } = useMedicalFormWizard();
 
   return (
@@ -28,7 +29,10 @@ const MedicalFormWizard = () => {
       <WizardHeader />
       
       <FormContainer onSubmit={handleSubmit}>
-        <StepIndicator currentStep={currentStep} totalSteps={totalSteps} />
+        {/* Solo mostrar indicador de paso si no se ha enviado el formulario */}
+        {!isSubmitted && (
+          <StepIndicator currentStep={currentStep} totalSteps={totalSteps} />
+        )}
         
         <StepRenderer 
           currentStep={currentStep}
@@ -38,16 +42,21 @@ const MedicalFormWizard = () => {
           handleFileChange={handleFileChange}
           handleSymptomsChange={handleSymptomsChange}
           isSubmitting={isSubmitting}
+          isSubmitted={isSubmitted}
+          onReset={resetForm}
         />
         
-        <FormNavigation
-          currentStep={currentStep}
-          totalSteps={totalSteps}
-          onPrev={prevStep}
-          onNext={nextStep}
-          onSubmit={handleSubmit}
-          isSubmitting={isSubmitting}
-        />
+        {/* Solo mostrar navegación si no se ha enviado el formulario */}
+        {!isSubmitted && (
+          <FormNavigation
+            currentStep={currentStep}
+            totalSteps={totalSteps}
+            onPrev={prevStep}
+            onNext={nextStep}
+            onSubmit={handleSubmit}
+            isSubmitting={isSubmitting}
+          />
+        )}
       </FormContainer>
     </WizardContainer>
   );
