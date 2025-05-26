@@ -8,14 +8,14 @@ interface StepIndicatorProps {
 
 const StepIndicator = ({ currentStep, totalSteps }: StepIndicatorProps) => {
   return (
-    <div className="py-4 px-8 bg-gray-50 border-b border-gray-100">
+    <div className="py-2 sm:py-3 md:py-4 px-2 sm:px-4 md:px-8 bg-gray-50 border-b border-gray-100">
       {/* Progress bar */}
       <div className="relative pt-1">
         <div className="flex items-center justify-between mb-1">
-          <div className="text-sm text-zambrano-dark-blue font-medium">
+          <div className="text-xs sm:text-sm text-zambrano-dark-blue font-medium">
             Paso {currentStep} de {totalSteps}
           </div>
-          <div className="text-sm text-zambrano-gray">
+          <div className="text-xs sm:text-sm text-zambrano-gray">
             {Math.round((currentStep / totalSteps) * 100)}% completado
           </div>
         </div>
@@ -28,7 +28,7 @@ const StepIndicator = ({ currentStep, totalSteps }: StepIndicatorProps) => {
       </div>
 
       {/* Step labels */}
-      <div className="flex justify-between items-center mt-4">
+      <div className="flex justify-between items-center mt-2 sm:mt-3 md:mt-4">
         {Array.from({ length: totalSteps }).map((_, index) => {
           const stepNumber = index + 1;
           const isActive = currentStep >= stepNumber;
@@ -41,9 +41,9 @@ const StepIndicator = ({ currentStep, totalSteps }: StepIndicatorProps) => {
             >
               <div 
                 className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium mb-1 transition-all",
+                  "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-xs sm:text-sm font-medium mb-1 transition-all",
                   isCurrentStep 
-                    ? "bg-zambrano-light-blue text-zambrano-dark-blue border-2 border-zambrano-light-blue ring-4 ring-zambrano-light-blue/20" 
+                    ? "bg-zambrano-light-blue text-zambrano-dark-blue border-2 border-zambrano-light-blue ring-2 sm:ring-4 ring-zambrano-light-blue/20" 
                     : isActive 
                       ? "bg-zambrano-light-blue text-zambrano-dark-blue" 
                       : "bg-gray-200 text-gray-500"
@@ -52,7 +52,7 @@ const StepIndicator = ({ currentStep, totalSteps }: StepIndicatorProps) => {
                 {stepNumber}
               </div>
               <span className={cn(
-                "text-xs whitespace-nowrap",
+                "text-xs sm:text-sm whitespace-nowrap text-center leading-tight",
                 isActive ? "text-zambrano-dark-blue font-medium" : "text-gray-400"
               )}>
                 {getStepName(stepNumber)}
