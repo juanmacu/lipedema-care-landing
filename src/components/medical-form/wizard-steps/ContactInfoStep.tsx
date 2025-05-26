@@ -11,32 +11,36 @@ interface ContactInfoStepProps {
 
 const ContactInfoStep = ({ formData, handleChange }: ContactInfoStepProps) => {
   return (
-    <div className="space-y-4 md:space-y-6">
-      <div className="text-center mb-4 md:mb-6 px-2">
-        <h3 className="text-lg md:text-xl lg:text-2xl font-medium text-zambrano-dark-blue leading-tight mb-2 md:mb-3">
+    <div className="space-y-6 md:space-y-8">
+      <div className="text-center mb-6 md:mb-8">
+        <h3 className="text-xl md:text-2xl lg:text-3xl font-medium text-zambrano-dark-blue leading-tight mb-3 md:mb-4">
           Queremos ayudarte de forma personalizada
         </h3>
-        <p className="text-zambrano-gray mt-2 text-sm md:text-base leading-relaxed">
+        <p className="text-zambrano-gray text-base md:text-lg leading-relaxed px-2">
           Comencemos por saber cómo podemos llamarte y contactarte.
         </p>
       </div>
       
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div>
-          <Label htmlFor="fullName" className="text-sm md:text-base font-medium">Nombre completo</Label>
+          <Label htmlFor="fullName" className="text-base md:text-lg font-medium text-zambrano-dark-blue mb-2 block">
+            Nombre completo
+          </Label>
           <Input 
             id="fullName"
             name="fullName"
             placeholder="Escribe tu nombre completo"
             value={formData.fullName}
             onChange={handleChange}
-            className="mt-2 border-gray-300 h-12 text-base"
+            className="h-12 md:h-14 text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-zambrano-dark-blue"
             required
           />
         </div>
         
         <div>
-          <Label htmlFor="email" className="text-sm md:text-base font-medium">Email</Label>
+          <Label htmlFor="email" className="text-base md:text-lg font-medium text-zambrano-dark-blue mb-2 block">
+            Email
+          </Label>
           <Input 
             id="email"
             name="email"
@@ -44,26 +48,30 @@ const ContactInfoStep = ({ formData, handleChange }: ContactInfoStepProps) => {
             placeholder="ejemplo@email.com"
             value={formData.email}
             onChange={handleChange}
-            className="mt-2 border-gray-300 h-12 text-base"
+            className="h-12 md:h-14 text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-zambrano-dark-blue"
             required
           />
         </div>
         
         <div>
-          <Label htmlFor="country" className="text-sm md:text-base font-medium">País</Label>
+          <Label htmlFor="country" className="text-base md:text-lg font-medium text-zambrano-dark-blue mb-2 block">
+            País
+          </Label>
           <Input 
             id="country"
             name="country"
             placeholder="País donde vives actualmente"
             value={formData.country}
             onChange={handleChange}
-            className="mt-2 border-gray-300 h-12 text-base"
+            className="h-12 md:h-14 text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-zambrano-dark-blue"
             required
           />
         </div>
         
         <div>
-          <Label htmlFor="phone" className="text-sm md:text-base font-medium">Teléfono</Label>
+          <Label htmlFor="phone" className="text-base md:text-lg font-medium text-zambrano-dark-blue mb-2 block">
+            Teléfono
+          </Label>
           <Input 
             id="phone"
             name="phone"
@@ -71,7 +79,7 @@ const ContactInfoStep = ({ formData, handleChange }: ContactInfoStepProps) => {
             placeholder="Tu número de contacto"
             value={formData.phone}
             onChange={handleChange}
-            className="mt-2 border-gray-300 h-12 text-base"
+            className="h-12 md:h-14 text-base md:text-lg border-2 border-gray-300 rounded-lg focus:border-zambrano-dark-blue"
             required
           />
         </div>
