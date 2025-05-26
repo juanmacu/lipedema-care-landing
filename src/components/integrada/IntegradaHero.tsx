@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -124,7 +124,6 @@ const IntegradaHero = () => {
               >
                 <Heart className="mr-1" />
                 <span className="relative">Agenda tu valoración médica</span>
-                <ArrowDown className="transition-transform duration-300 group-hover:translate-y-1" size={20} />
               </Button>
               
               <p className="mt-4 md:mt-6 text-zambrano-gray animate-fade-in opacity-0 text-center md:text-left" style={{ animationDelay: "800ms", animationFillMode: "forwards" }}>
@@ -174,16 +173,6 @@ const IntegradaHero = () => {
             </div>
           </div>
         </div>
-      </div>
-      
-      <div className="absolute bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button 
-          onClick={() => scrollToSection('lipedema')} 
-          className="text-zambrano-dark-blue hover:text-zambrano-light-blue transition-colors p-2"
-          aria-label="Scroll to lipedema section"
-        >
-          <ArrowDown size={24} className="md:w-8 md:h-8" />
-        </button>
       </div>
     </section>
   );
