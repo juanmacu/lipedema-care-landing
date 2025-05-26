@@ -62,22 +62,24 @@
   
   ul li::before {
     content: "•";
-    @apply absolute left-0 top-0 text-zambrano-light-blue text-sm font-normal;
+    @apply absolute left-0 top-0 text-zambrano-light-blue text-xs font-normal;
     line-height: inherit;
   }
   
   /* Para listas ordenadas también */
   ol {
-    @apply list-none counter-reset-item;
+    @apply list-none;
+    counter-reset: item;
   }
   
   ol li {
-    @apply relative pl-6 counter-increment-item;
+    @apply relative pl-6;
+    counter-increment: item;
   }
   
   ol li::before {
     content: counter(item) ".";
-    @apply absolute left-0 top-0 text-zambrano-light-blue text-sm font-normal;
+    @apply absolute left-0 top-0 text-zambrano-light-blue text-xs font-normal;
     line-height: inherit;
   }
 
