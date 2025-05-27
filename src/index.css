@@ -102,19 +102,6 @@
   .section-subtitle {
     @apply text-xl md:text-2xl text-zambrano-gray mb-10 max-w-2xl mx-auto;
   }
-
-  /* Clases para mejorar contraste de textos claros */
-  .text-light-improved {
-    @apply text-zambrano-gray/90;
-  }
-  
-  .text-light-secondary {
-    @apply text-zambrano-gray/80;
-  }
-  
-  .text-light-tertiary {
-    @apply text-zambrano-gray/70;
-  }
 }
 
 /* Animaciones mejoradas */
@@ -140,24 +127,8 @@
   }
 }
 
-@keyframes successPulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .animate-fade-in {
   animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-success-pulse {
-  animation: successPulse 2s ease-in-out infinite;
 }
 
 .hover-scale {
