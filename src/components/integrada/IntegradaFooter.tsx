@@ -113,7 +113,7 @@ const IntegradaFooter = () => {
                   className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                 >
                   <Phone size={18} />
-                  <span>+57 3232348414</span>
+                  <span>+57 323 234 8414</span>
                 </a>
               </li>
             </ul>
@@ -125,15 +125,19 @@ const IntegradaFooter = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-zambrano-light-blue mt-1" />
-                <span className="text-gray-300">Cll. 134 #7-83 Torre 3 Consultorio 633, Bogotá, Colombia</span>
+                <span className="text-gray-300">Calle 127 A N° 7-53 Edificio INO, Consultorio 7001 Bogotá - Colombia</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-zambrano-light-blue" />
-                <a href="tel:+576013482668" className="text-gray-300 hover:text-white">+57 (601) 348-2668</a>
+                <div className="text-gray-300">
+                  <a href="tel:+573232348414" className="hover:text-white">+57 323 234 8414</a>
+                  <span className="mx-1">/</span>
+                  <a href="tel:+573002160774" className="hover:text-white">300 216 0774</a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-zambrano-light-blue" />
-                <a href="mailto:info@lipedemacare.com" className="text-gray-300 hover:text-white">info@lipedemacare.com</a>
+                <a href="mailto:info@gaonazambrano.com" className="text-gray-300 hover:text-white">info@gaonazambrano.com</a>
               </li>
               <li>
                 <p className="text-sm text-gray-300 mt-4">
