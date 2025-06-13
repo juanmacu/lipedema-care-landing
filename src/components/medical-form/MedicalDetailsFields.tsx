@@ -15,17 +15,17 @@ const MedicalDetailsFields = ({ formData, handleChange, handleSelectChange }: Me
   const doctors = [
     {
       value: "dr_zambrano",
-      name: "Dr. Juan C. Zambrano",
+      name: "Dr. Juan Carlos Zambrano",
       specialty: "Cirujano plástico",
       description: "Especialista en tratamiento de Lipedema",
-      photoUrl: "/lovable-uploads/68834900-3e16-4c08-b4e5-2a1502c9623a.png"
+      photoUrl: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9303-2.jpg"
     },
     {
       value: "dra_gaona",
       name: "Dra. Jennifer Gaona",
-      specialty: "Cirujano plástico",
+      specialty: "Cirujana plástica",
       description: "Especialista en tratamiento de Lipedema",
-      photoUrl: "/lovable-uploads/752b0d58-8e44-46da-8425-13111f67d9f6.png"
+      photoUrl: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9308-2.jpg"
     }
   ];
 
