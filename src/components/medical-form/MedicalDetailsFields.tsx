@@ -16,14 +16,16 @@ const MedicalDetailsFields = ({ formData, handleChange, handleSelectChange }: Me
     {
       value: "dr_zambrano",
       name: "Dr. Juan C. Zambrano",
-      specialty: "Cirugía Plástica y Estética",
-      description: "Especialista en Lipedema y Linfedema"
+      specialty: "Cirujano plástico",
+      description: "Especialista en tratamiento de Lipedema",
+      photoUrl: "/lovable-uploads/68834900-3e16-4c08-b4e5-2a1502c9623a.png"
     },
     {
       value: "dra_gaona",
       name: "Dra. Jennifer Gaona",
-      specialty: "Medicina Estética",
-      description: "Especialista en tratamientos de Lipedema"
+      specialty: "Cirujano plástico",
+      description: "Especialista en tratamiento de Lipedema",
+      photoUrl: "/lovable-uploads/752b0d58-8e44-46da-8425-13111f67d9f6.png"
     }
   ];
 

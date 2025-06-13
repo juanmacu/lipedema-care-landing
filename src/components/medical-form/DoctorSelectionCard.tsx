@@ -8,6 +8,7 @@ interface Doctor {
   name: string;
   specialty: string;
   description: string;
+  photoUrl?: string;
 }
 
 interface DoctorSelectionCardProps {
@@ -28,14 +29,22 @@ const DoctorSelectionCard = ({ doctor, selected, onSelect }: DoctorSelectionCard
       onClick={() => onSelect(doctor.value)}
     >
       <div className="flex items-center space-x-4">
-        {/* Avatar placeholder */}
+        {/* Photo or Avatar placeholder */}
         <div className={cn(
-          "w-12 h-12 rounded-full flex items-center justify-center transition-colors",
+          "w-12 h-12 rounded-full flex items-center justify-center overflow-hidden transition-colors border-2",
           selected 
-            ? "bg-zambrano-light-blue text-zambrano-dark-blue" 
-            : "bg-gray-100 text-gray-600"
+            ? "border-zambrano-light-blue" 
+            : "border-gray-200"
         )}>
-          <User size={24} />
+          {doctor.photoUrl ? (
+            <img 
+              src={doctor.photoUrl} 
+              alt={doctor.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <User size={24} className={selected ? "text-zambrano-dark-blue" : "text-gray-600"} />
+          )}
         </div>
         
         {/* Doctor info */}
