@@ -1,9 +1,9 @@
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { MedicalFormData } from "./FormTypes";
+import DoctorSelectionCard from "./DoctorSelectionCard";
 
 interface MedicalDetailsFieldsProps {
   formData: MedicalFormData;
@@ -12,6 +12,21 @@ interface MedicalDetailsFieldsProps {
 }
 
 const MedicalDetailsFields = ({ formData, handleChange, handleSelectChange }: MedicalDetailsFieldsProps) => {
+  const doctors = [
+    {
+      value: "dr_zambrano",
+      name: "Dr. Juan C. Zambrano",
+      specialty: "Cirugía Plástica y Estética",
+      description: "Especialista en Lipedema y Linfedema"
+    },
+    {
+      value: "dra_gaona",
+      name: "Dra. Jennifer Gaona",
+      specialty: "Medicina Estética",
+      description: "Especialista en tratamientos de Lipedema"
+    }
+  ];
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -43,20 +58,19 @@ const MedicalDetailsFields = ({ formData, handleChange, handleSelectChange }: Me
       </div>
       
       <div>
-        <Label htmlFor="doctor">Selecciona el doctor</Label>
-        <Select 
-          name="doctor" 
-          onValueChange={(value) => handleSelectChange("doctor", value)}
-          value={formData.doctor}
-        >
-          <SelectTrigger className="mt-1">
-            <SelectValue placeholder="Elige un especialista" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="dr_zambrano">Dr. Juan C. Zambrano</SelectItem>
-            <SelectItem value="dra_gaona">Dra. Jennifer Gaona</SelectItem>
-          </SelectContent>
-        </Select>
+        <Label className="text-base font-medium text-zambrano-dark-blue mb-4 block">
+          Selecciona tu especialista preferido
+        </Label>
+        <div className="grid grid-cols-1 gap-3 mt-3">
+          {doctors.map((doctor) => (
+            <DoctorSelectionCard
+              key={doctor.value}
+              doctor={doctor}
+              selected={formData.doctor === doctor.value}
+              onSelect={(value) => handleSelectChange("doctor", value)}
+            />
+          ))}
+        </div>
       </div>
       
       <div>
