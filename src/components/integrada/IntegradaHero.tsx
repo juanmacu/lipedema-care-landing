@@ -143,32 +143,19 @@ const IntegradaHero = () => {
               {/* Aura suave alrededor de la imagen */}
               <div className="absolute -inset-2 bg-gradient-to-r from-zambrano-light-blue/20 to-zambrano-dark-blue/20 rounded-3xl blur-lg"></div>
               
-              {/* Before and After Lipedema images */}
-              <div className="grid grid-cols-2 gap-0.5 relative">
-                <div className="aspect-[4/5] md:aspect-square overflow-hidden bg-white relative">
+              {/* Nueva imagen del repositorio */}
+              <div className="relative">
+                <div className="aspect-[4/5] md:aspect-[4/3] lg:aspect-[16/10] overflow-hidden bg-white relative">
                   <img 
-                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/lipedema_64cbb4cc_1200x1200.jpg" 
-                    alt="Lipedema antes del tratamiento" 
+                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/WhatsApp%20Image%202025-06-17%20at%2013.25.32.jpeg" 
+                    alt="Resultados reales del tratamiento de lipedema" 
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
                   />
-                  <div className="absolute top-2 left-2 bg-zambrano-dark-blue/80 text-white px-2 py-1 rounded text-xs font-medium">
-                    Antes
-                  </div>
                 </div>
-                <div className="aspect-[4/5] md:aspect-square overflow-hidden bg-white relative">
-                  <img 
-                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/lipedema_retouch_suave_intenso.jpg" 
-                    alt="Lipedema después del tratamiento" 
-                    className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
-                  />
-                  <div className="absolute top-2 left-2 bg-zambrano-light-blue/90 text-zambrano-dark-blue px-2 py-1 rounded text-xs font-bold">
-                    Después
-                  </div>
+                <div className="absolute bottom-0 left-0 right-0 text-center text-white p-3 md:p-4 bg-gradient-to-t from-zambrano-dark-blue/90 to-transparent">
+                  <p className="font-bold text-sm md:text-base">Resultados reales de nuestros tratamientos</p>
+                  <p className="text-xs md:text-sm">Transformación integral del lipedema</p>
                 </div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 text-center text-white p-3 md:p-4 bg-gradient-to-t from-zambrano-dark-blue/90 to-transparent">
-                <p className="font-bold text-sm md:text-base">Resultados reales de nuestros tratamientos</p>
-                <p className="text-xs md:text-sm">Transformación integral del lipedema</p>
               </div>
             </div>
           </div>
