@@ -143,7 +143,7 @@ const IntegradaHero = () => {
               {/* Aura suave alrededor de la imagen */}
               <div className="absolute -inset-2 bg-gradient-to-r from-zambrano-light-blue/20 to-zambrano-dark-blue/20 rounded-3xl blur-lg"></div>
               
-              {/* Nueva imagen del repositorio */}
+              {/* Imagen antes y después con etiquetas */}
               <div className="relative">
                 <div className="aspect-[4/5] md:aspect-[4/3] lg:aspect-[16/10] overflow-hidden bg-white relative">
                   <img 
@@ -151,6 +151,14 @@ const IntegradaHero = () => {
                     alt="Resultados reales del tratamiento de lipedema" 
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
                   />
+                  {/* Etiqueta "Antes" en la parte izquierda */}
+                  <div className="absolute top-3 left-3 bg-zambrano-dark-blue/90 text-white px-3 py-1.5 rounded-md text-sm font-medium">
+                    Antes
+                  </div>
+                  {/* Etiqueta "Después" en la parte derecha */}
+                  <div className="absolute top-3 right-3 bg-zambrano-light-blue/95 text-zambrano-dark-blue px-3 py-1.5 rounded-md text-sm font-bold">
+                    Después
+                  </div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 text-center text-white p-3 md:p-4 bg-gradient-to-t from-zambrano-dark-blue/90 to-transparent">
                   <p className="font-bold text-sm md:text-base">Resultados reales de nuestros tratamientos</p>
