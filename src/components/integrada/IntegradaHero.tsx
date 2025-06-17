@@ -147,7 +147,7 @@ const IntegradaHero = () => {
               <div className="relative">
                 <div className="aspect-[4/5] md:aspect-[4/3] lg:aspect-[16/10] overflow-hidden bg-white relative">
                   <img 
-                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/WhatsApp%20Image%202025-06-17%20at%2013.25.32.jpeg" 
+                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/freepik__enhance__46909-2.png" 
                     alt="Resultados reales del tratamiento de lipedema" 
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
                   />
