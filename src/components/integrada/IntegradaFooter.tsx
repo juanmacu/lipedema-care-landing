@@ -139,15 +139,6 @@ const IntegradaFooter = () => {
                 <Mail size={18} className="text-zambrano-light-blue" />
                 <a href="mailto:info@gaonazambrano.com" className="text-gray-300 hover:text-white">info@gaonazambrano.com</a>
               </li>
-              <li>
-                <p className="text-sm text-gray-300 mt-4">
-                  Conoce más sobre el Lipedema:
-                </p>
-                <a href="https://www.lipedema.org/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-zambrano-light-blue hover:underline">
-                  <span>Lipedema Foundation</span>
-                  <ExternalLink size={14} />
-                </a>
-              </li>
             </ul>
           </div>
         </div>
