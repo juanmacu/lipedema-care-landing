@@ -54,7 +54,7 @@ const BookSection = () => {
                 <div className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-zambrano-light-blue mt-2 flex-shrink-0"></div>
                   <p className="text-sm text-zambrano-gray">
-                    <strong>Casos clínicos</strong> reales documentados
+                    <strong>Testimonios reales</strong> que inspiran y acompañan
                   </p>
                 </div>
               </div>
