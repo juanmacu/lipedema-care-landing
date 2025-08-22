@@ -35,7 +35,7 @@ const BookSection = () => {
               </div>
               
               <p className="text-zambrano-gray leading-relaxed">
-                Guía especializada del Dr. Juan C. Zambrano sobre diagnóstico y tratamiento integral del Lipedema.
+                Escrito por dos especialistas con amplia experiencia en el tratamiento del lipedema, este manual combina conocimiento científico con un profundo compromiso humano.
               </p>
 
               <div className="space-y-2">
