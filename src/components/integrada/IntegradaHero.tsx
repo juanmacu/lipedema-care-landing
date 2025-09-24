@@ -1,32 +1,8 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-
-type AssetType = 'logo' | 'banner' | 'collage' | 'foto-doctor' | 'foto-doctora';
 
 const IntegradaHero = () => {
-  // Custom hook moved inside the component
-  const useBrandingAssets = (type: AssetType) => {
-    return useQuery({
-      queryKey: ['branding-assets', type],
-      queryFn: async () => {
-        const { data, error } = await supabase
-          .from('branding_assets')
-          .select('*')
-          .eq('type', type)
-          .single();
-        
-        if (error) throw error;
-        return data;
-      }
-    });
-  };
-
-  const { data: bannerData, isLoading: bannerLoading } = useBrandingAssets('banner');
-
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     section?.scrollIntoView({ behavior: 'smooth' });
@@ -147,7 +123,7 @@ const IntegradaHero = () => {
               <div className="relative">
                 <div className="aspect-[4/5] md:aspect-[4/3] lg:aspect-[16/10] overflow-hidden bg-white relative">
                   <img 
-                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/freepik__enhance__46909-2.png" 
+                    src="/images/hero/antes-despues.png" 
                     alt="Resultados reales del tratamiento de lipedema" 
                     className="w-full h-full object-cover hover:scale-105 transition-all duration-500"
                   />

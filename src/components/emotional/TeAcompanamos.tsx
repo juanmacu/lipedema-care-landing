@@ -6,12 +6,12 @@ import { QuoteIcon } from "lucide-react";
 const TeAcompanamos = () => {
   const images = [
     {
-      src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9701-2.jpg",
+      src: "/images/doctors/consultorio.jpg",
       alt: "Dr. Zambrano en consultorio",
       title: "Diagnóstico personalizado"
     },
     {
-      src: "https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9360-2.jpg",
+      src: "/images/doctors/quirofano.jpg",
       alt: "Dr. Zambrano en quirófano",
       title: "Tratamiento especializado"
     }

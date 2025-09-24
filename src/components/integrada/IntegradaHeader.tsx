@@ -37,7 +37,7 @@ const IntegradaHeader = () => {
           {/* Logo - aumentado 25% */}
           <div className="flex items-center transition-transform duration-300 hover:scale-[1.02]">
             <img 
-              src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/01.png" 
+              src="/images/branding/logo-dark.png" 
               alt="Logo Gaona Zambrano" 
               className="h-12 w-auto object-contain"
             />

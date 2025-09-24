@@ -1,27 +1,7 @@
 
-import { ExternalLink, Heart, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-
-// Custom hook to fetch logo from Supabase
-const useLogo = () => {
-  return useQuery({
-    queryKey: ['branding-logo-footer'],
-    queryFn: async () => {
-      const { data, error } = await supabase
-        .from('branding_assets')
-        .select('*')
-        .eq('type', 'logo')
-        .single();
-      
-      if (error) throw error;
-      return data;
-    }
-  });
-};
+import { Heart, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const IntegradaFooter = () => {
-  const { data: logoData, isLoading } = useLogo();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -32,7 +12,7 @@ const IntegradaFooter = () => {
           <div className="col-span-1">
             <div className="mb-6">
               <img 
-                src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/02.png" 
+                src="/images/branding/logo-white.png" 
                 alt="Gaona Zambrano Cirujanos Plásticos" 
                 className="h-24 w-auto"
                 style={{ maxWidth: '100%' }}

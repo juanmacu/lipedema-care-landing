@@ -9,7 +9,7 @@ const Footer = () => {
             <div>
               <div className="mb-4">
                 <img 
-                  src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/logos/02.png" 
+                  src="/images/branding/logo-white.png" 
                   alt="Gaona Zambrano Cirujanos Plásticos" 
                   className="h-12"
                 />

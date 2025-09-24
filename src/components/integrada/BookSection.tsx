@@ -17,7 +17,7 @@ const BookSection = () => {
                 <div className="absolute -inset-2 bg-gradient-to-r from-zambrano-light-blue/20 to-zambrano-dark-blue/20 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                 <div className="relative bg-white p-4 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300">
                   <img 
-                    src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/Libro%20Lipedema.png"
+                    src="/images/products/libro-lipedema.png"
                     alt="Manual de Lipedema del Dr. Juan C. Zambrano"
                     className="w-full max-w-48 mx-auto h-auto object-contain group-hover:scale-105 transition-transform duration-300"
                   />

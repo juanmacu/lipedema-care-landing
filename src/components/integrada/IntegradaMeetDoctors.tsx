@@ -1,8 +1,6 @@
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
 
 const IntegradaMeetDoctors = () => {
   const [expandedZambrano, setExpandedZambrano] = useState(false);
@@ -26,7 +24,7 @@ const IntegradaMeetDoctors = () => {
           <Card className="overflow-hidden border-none shadow-lg reveal-section">
             <div className="aspect-[4/3] overflow-hidden">
               <img 
-                src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9303-2.jpg" 
+                src="/images/doctors/zambrano.jpg" 
                 alt="Dr. Juan C. Zambrano" 
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
@@ -80,7 +78,7 @@ const IntegradaMeetDoctors = () => {
           <Card className="overflow-hidden border-none shadow-lg reveal-section">
             <div className="aspect-[4/3] overflow-hidden">
               <img 
-                src="https://thiqqlnlxkifyyncehmk.supabase.co/storage/v1/object/public/branding-assets/img%20web/DSCF9308-2.jpg"
+                src="/images/doctors/gaona.jpg"
                 alt="Dra. Jennifer Gaona"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
